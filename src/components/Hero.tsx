@@ -20,8 +20,8 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+  const scrollToServices = () => {
+    const element = document.getElementById('services');
     if (element) {
       const navHeight = 120;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
@@ -60,7 +60,7 @@ export default function Hero() {
         <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="hero-button">
           <InteractiveHoverButton
             text="Starten"
-            onClick={scrollToContact}
+            onClick={scrollToServices}
           />
         </BlurFade>
       </div>
