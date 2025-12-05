@@ -21,7 +21,7 @@ export default function Contact() {
     try {
       // JETZT senden wir wirklich an Supabase
       const { error } = await supabase
-        .from('contacts')
+        .from('contact_submissions')
         .insert([
           {
             name: formData.name,
