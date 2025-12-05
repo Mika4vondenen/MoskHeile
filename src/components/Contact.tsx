@@ -111,7 +111,7 @@ export default function Contact() {
              <div className="bg-black p-8 rounded-xl">
                <h4 className="text-2xl font-bold text-white mb-4">Starten wir Ihr Projekt.</h4>
                <p className="text-white mb-6">Ob Produktfotografie, Videoproduktion oder professionelles Editing.</p>
-               <div className="flex items-center gap-2 text-[#FFB400] font-semibold"><Clock size={20} /><span>Antwort innerhalb von 24 Stunden</span></div>
+               <div className="flex items-center gap-2 text-[#FFB400] font-semibold"><Clock size={20} /><span>Antwort innerhalb von 48 Stunden</span></div>
              </div>
           </div>
         </div>
