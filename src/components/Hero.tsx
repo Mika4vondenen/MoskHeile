@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { InteractiveHoverButton } from './ui/interactive-hover-button';
 import { BlurFade } from './ui/blur-fade';
 import { useAnimation } from '../context/AnimationContext';
@@ -7,6 +8,7 @@ import heroImg2 from '../../assets/982564cf-d447-492e-a99f-f592f3f4d981.png';
 import heroImg3 from '../../assets/f61c5e57-a3c5-4a50-99e0-637f33fef76b.png';
 
 export default function Hero() {
+  const navigate = useNavigate();
   const images = [heroImg1, heroImg2, heroImg3];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -20,14 +22,8 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollToServices = () => {
-    const element = document.getElementById('services');
-    if (element) {
-      const navHeight = 120;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - navHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+  const handleStartClick = () => {
+    navigate('/services');
   };
 
   return (
@@ -60,7 +56,7 @@ export default function Hero() {
         <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="hero-button">
           <InteractiveHoverButton
             text="Starten"
-            onClick={scrollToServices}
+            onClick={handleStartClick}
           />
         </BlurFade>
       </div>
