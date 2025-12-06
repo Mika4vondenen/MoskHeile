@@ -10,12 +10,17 @@ export default function ServicesPage() {
   const navigate = useNavigate();
   const { showInitialAnimation } = useAnimation();
 
+  const getNavHeight = () => {
+    if (window.innerWidth < 640) return 80;
+    return 100;
+  };
+
   const scrollToContact = () => {
     navigate('/');
     setTimeout(() => {
       const element = document.getElementById('contact');
       if (element) {
-        const navHeight = 120;
+        const navHeight = getNavHeight();
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - navHeight;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -28,11 +33,11 @@ export default function ServicesPage() {
       <section className="pt-28 sm:pt-32 py-16 sm:py-24" style={{ backgroundColor: '#262626' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="services-header">
-            <div className="text-center mb-12 sm:mb-16">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 dm-serif-text-regular" style={{ color: '#f59e0b' }}>
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 dm-serif-text-regular" style={{ color: '#f59e0b' }}>
                 Unsere Foto-, Video- & Editing-Services
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
                 Von der ersten Idee bis zum fertigen Projekt – wir begleiten Sie mit Professionalität und Leidenschaft.
               </p>
             </div>
@@ -107,19 +112,19 @@ export default function ServicesPage() {
           </BlurFade>
 
           <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="services-cta">
-            <div className="bg-black p-8 sm:p-12 rounded-xl text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+            <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-xl text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
               Starten wir Ihr Projekt!
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
               Kontaktieren Sie mich für ein unverbindliches Erstgespräch und lassen Sie uns gemeinsam Ihre Vision verwirklichen.
             </p>
             <button
               onClick={scrollToContact}
-              className="group inline-flex items-center gap-2 sm:gap-3 bg-[#F5B700] text-[#0A1F44] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-[#ffc61a] transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+              className="group inline-flex items-center gap-2 sm:gap-3 bg-[#F5B700] text-[#0A1F44] px-5 sm:px-8 py-2 sm:py-4 rounded-lg font-bold text-sm sm:text-base lg:text-lg hover:bg-[#ffc61a] transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
             >
               Jetzt Beratung anfragen
-              <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={20} />
+              <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={18} />
             </button>
             </div>
           </BlurFade>

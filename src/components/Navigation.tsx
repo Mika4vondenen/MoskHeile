@@ -52,6 +52,11 @@ export default function Navigation() {
     }
   }, [location.pathname]);
 
+  const getNavHeight = () => {
+    if (window.innerWidth < 640) return 80;
+    return 100;
+  };
+
   const scrollToContact = () => {
     if (location.pathname !== '/') {
       navigate('/');
@@ -59,7 +64,7 @@ export default function Navigation() {
         const element = document.getElementById('contact');
         if (element) {
           isScrollingRef.current = true;
-          const navHeight = 120;
+          const navHeight = getNavHeight();
           const elementPosition = element.getBoundingClientRect().top + window.scrollY;
           const offsetPosition = elementPosition - navHeight;
           window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
@@ -70,7 +75,7 @@ export default function Navigation() {
       const element = document.getElementById('contact');
       if (element) {
         isScrollingRef.current = true;
-        const navHeight = 120;
+        const navHeight = getNavHeight();
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - navHeight;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });

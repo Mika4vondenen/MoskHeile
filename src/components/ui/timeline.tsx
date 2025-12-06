@@ -43,10 +43,10 @@ const TimelineItem = ({ item, index, totalItems }: { item: TimelineEntry; index:
   return (
     <div
       ref={itemRef}
-      className="flex justify-start pt-10 md:pt-40 md:gap-10"
+      className="flex justify-start pt-6 sm:pt-10 md:pt-20 lg:pt-40 gap-6 md:gap-10"
     >
       <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-        <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
+        <div className="h-10 absolute left-2 sm:left-3 w-10 rounded-full bg-black flex items-center justify-center">
           <motion.div
             className="h-4 w-4 rounded-full p-2"
             style={{
@@ -59,16 +59,16 @@ const TimelineItem = ({ item, index, totalItems }: { item: TimelineEntry; index:
             }}
           />
         </div>
-        <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-400">
+        <h3 className="hidden md:block text-lg sm:text-2xl md:pl-16 lg:pl-20 md:text-3xl lg:text-5xl font-bold text-neutral-400">
           {item.title}
         </h3>
       </div>
 
-      <div className="relative pl-20 pr-4 md:pl-4 w-full">
-        <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-400">
+      <div className="relative pl-16 sm:pl-20 pr-3 sm:pr-4 md:pl-4 w-full">
+        <h3 className="md:hidden block text-lg sm:text-xl mb-3 sm:mb-4 text-left font-bold text-neutral-400">
           {item.title}
         </h3>
-        {item.content}{" "}
+        <p className="text-sm sm:text-base">{item.content}</p>
       </div>
     </div>
   );
