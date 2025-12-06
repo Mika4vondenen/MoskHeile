@@ -110,7 +110,7 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'Home', image: homeIcon, onClick: () => goToHome() },
-    { name: 'Services', image: servicesIcon, onClick: () => goToServices() },
+    { name: 'Services', mobileImage: servicesIcon, onClick: () => goToServices() },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },

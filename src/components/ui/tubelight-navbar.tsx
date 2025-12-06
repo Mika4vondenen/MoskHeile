@@ -8,6 +8,7 @@ interface NavItem {
   onClick?: () => void
   icon?: LucideIcon
   image?: string
+  mobileImage?: string
 }
 
 interface NavBarProps {
@@ -45,7 +46,14 @@ export function NavBar({ items, className, activeSection }: NavBarProps) {
                 isActive && "text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)] drop-shadow-[0_0_16px_rgba(100,200,255,0.8)]",
               )}
             >
-              {item.image ? (
+              {item.mobileImage ? (
+                <>
+                  <span className="hidden md:inline">{item.name}</span>
+                  <span className="md:hidden">
+                    <img src={item.mobileImage} alt={item.name} className="h-5 w-5" />
+                  </span>
+                </>
+              ) : item.image ? (
                 <>
                   <span className="hidden md:inline">
                     <img src={item.image} alt={item.name} className="h-5 w-5 inline-block" />
