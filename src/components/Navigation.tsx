@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import logo from '../../public/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
 import homeIcon from '../../assets/ChatGPT Image 20. Nov. 2025, 22_43_05.png';
+import servicesIcon from '../../public/chatgpt_image_6._dez._2025,_17_52_55.png';
 
 export default function Navigation() {
   const navigate = useNavigate();
@@ -109,7 +110,7 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'Home', image: homeIcon, onClick: () => goToHome() },
-    { name: 'Services', icon: Zap, onClick: () => goToServices() },
+    { name: 'Services', image: servicesIcon, onClick: () => goToServices() },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },
