@@ -29,14 +29,17 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0A1F44] via-[#0d2a5c] to-[#0A1F44] pt-16 sm:pt-20 md:pt-0">
       {images.map((image, index) => (
-        <div
+        <img
           key={image}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          src={image}
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
           style={{
-            backgroundImage: `url('${image}')`,
             opacity: currentImageIndex === index ? 0.8 : 0,
           }}
-        ></div>
+          loading={index === 0 ? 'eager' : 'lazy'}
+          fetchPriority={index === 0 ? 'high' : 'auto'}
+        />
       ))}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 text-center">
