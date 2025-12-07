@@ -76,7 +76,7 @@ export default function ServicesPage() {
               Nicht sicher, welcher Bereich zu Ihnen passt?
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
-              Kontaktieren Sie mich für eine kostenlose Beratung. Gemeinsam finden wir den perfekten Service für Ihr Projekt.
+              Kontaktieren Sie mich für eine kostenlose Beratung. Gemeinsam finden wir die perfekte Lösung für Ihr Projekt.
             </p>
             <button
               onClick={() => {
