@@ -10,7 +10,7 @@ export const eventServices: Service[] = [
   {
     id: 'event-photography',
     title: 'Event-Fotografie',
-    description: 'Professionelle Eventdokumentation mit starken Momenten und modernem Look. Perfekt für Festivals, Konzerte und Firmenevents.',
+    description: 'Klare, saubere Bilder eurer Veranstaltung. Ob Festival, Konzert oder private Feier – ich dokumentiere die wichtigsten Momente übersichtlich und zuverlässig.\n\nIdeal für:\n• Events & Festivals\n• Firmenfeiern\n• Konzerte\n• Private Feiern',
     image: 'https://images.pexels.com/photos/1763814/pexels-photo-1763814.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/event/fotografie',
   },
