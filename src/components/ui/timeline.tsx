@@ -5,6 +5,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { BGPattern } from "./bg-pattern";
+import { GradualSpacing } from "./gradual-spacing";
 
 interface TimelineEntry {
   title: string;
@@ -101,9 +102,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <BGPattern variant="grid" mask="fade-edges" fill="rgba(209, 213, 219, 0.15)" size={60} />
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 relative z-20">
-        <h2 className="text-4xl md:text-6xl mb-4 text-white max-w-4xl" style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}>
-          Meine Geschichte
-        </h2>
+        <GradualSpacing
+          text="Meine Geschichte"
+          className="text-4xl md:text-6xl mb-4 text-white max-w-4xl"
+          duration={0.5}
+          delayMultiple={0.05}
+          style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}
+        />
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20 z-20">
