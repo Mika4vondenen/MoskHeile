@@ -24,7 +24,7 @@ export const eventServices: Service[] = [
   {
     id: 'event-editing',
     title: 'Event-Editing',
-    description: 'Schnelle Nachbearbeitung Ihrer Event-Aufnahmen. Farbkorrektur, Schnitt und professionelle Veredelung Ihrer Festival- und Konzert-Videos.',
+    description: 'Nachbearbeitung für Event-Fotos und Event-Videos.\nSaubere Farben, ruhige Schnitte und Optimierungen, damit euer Eventmaterial gut aussieht und direkt nutzbar ist.\n\nIdeal für:\n• Aftermovies\n• Konzert- & Festivalvideos\n• Social-Media-Clips\n• Event-Fotos',
     image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/event/editing',
   },
