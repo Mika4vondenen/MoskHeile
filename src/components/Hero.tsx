@@ -52,7 +52,7 @@ export default function Hero() {
 
         <BlurFade delay={0.5} inView={showInitialAnimation} sessionKey="hero-subtitle">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-6 sm:mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}>
-            Wir verwandeln ihre Vision in ein Visuelles Meisterwerk. Für Privatkunden und Unternehmen in Belgien,Luxemburg und Deutschland.
+            Ich verwandle ihre Vision in ein Visuelles Meisterwerk. Für Privatkunden und Unternehmen in Belgien,Luxemburg und Deutschland.
           </p>
         </BlurFade>
 
