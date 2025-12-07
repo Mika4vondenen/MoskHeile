@@ -103,7 +103,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-[#f59e0b] w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0"><MessageCircle className="text-[#0A1F44]" size={20} /></div>
-                  <div><h4 className="font-semibold text-gray-300 mb-1 text-sm sm:text-base">WhatsApp</h4><a href="https://wa.me/49176476972299" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#f59e0b] text-xs sm:text-sm">(+49) 0176 4769 7299</a></div>
+                  <div><h4 className="font-semibold text-gray-300 mb-1 text-sm sm:text-base">WhatsApp</h4><a href="https://wa.me/49176476972299" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#f59e0b] text-xs sm:text-sm">Chat starten</a></div>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-[#f59e0b] w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0"><MapPin className="text-[#0A1F44]" size={20} /></div>
