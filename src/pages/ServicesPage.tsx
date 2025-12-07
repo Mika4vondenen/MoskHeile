@@ -35,7 +35,7 @@ export default function ServicesPage() {
                 Unsere Foto-, Video- & Editing-Services
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-                Von der ersten Idee bis zum fertigen Projekt – wir begleiten Sie mit Professionalität und Leidenschaft.
+                Von der ersten Idee bis zum fertigen Projekt – Ich begleite Sie mit Professionalität und Leidenschaft.
               </p>
             </div>
           </BlurFade>
