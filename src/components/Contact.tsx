@@ -91,7 +91,7 @@ export default function Contact() {
           </div>
 
           <div>
-             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#f59e0b] mb-6 sm:mb-8">Kontaktinformationen</h3>
+             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#f59e0b] mb-6 sm:mb-8">KONTAKTINFORMATIONEN</h3>
              <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-[#f59e0b] w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0"><Mail className="text-[#0A1F44]" size={20} /></div>
