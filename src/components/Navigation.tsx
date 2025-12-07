@@ -2,7 +2,7 @@ import { Home, Info, Image, Mail, Zap } from 'lucide-react';
 import { NavBar } from './ui/tubelight-navbar';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
-import homeIcon from '../../public/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
+import homeIcon from '../../assets/ChatGPT Image 20. Nov. 2025, 22_43_05.png';
 
 export default function Navigation() {
   const navigate = useNavigate();
