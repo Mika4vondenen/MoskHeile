@@ -15,6 +15,7 @@ export function ServiceList({ services }: ServiceListProps) {
           description={service.description}
           image={service.image}
           link={service.link}
+          icon={service.icon}
         />
       ))}
     </div>

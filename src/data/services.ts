@@ -2,6 +2,7 @@ import eventPhoto from '../../assets/SON03067.webp';
 import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
 import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
 import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
+import eventFotografieIcon from '../../assets/5dcbd8e8-73be-4b58-8b97-90007764cead.png';
 
 export interface Service {
   id: string;
@@ -9,6 +10,7 @@ export interface Service {
   description: string;
   image: string;
   link: string;
+  icon?: string;
 }
 
 export const eventServices: Service[] = [
@@ -18,6 +20,7 @@ export const eventServices: Service[] = [
     description: 'Klare, saubere Bilder eurer Veranstaltung. Ob Festival, Konzert oder private Feier – ich dokumentiere die wichtigsten Momente übersichtlich und zuverlässig.\n\nIdeal für:\n• Events & Festivals\n• Firmenfeiern\n• Konzerte\n• Private Feiern',
     image: eventPhoto,
     link: '/services/event/fotografie',
+    icon: eventFotografieIcon,
   },
   {
     id: 'event-videography',

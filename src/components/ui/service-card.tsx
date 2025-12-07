@@ -5,9 +5,10 @@ interface ServiceCardProps {
   description: string;
   image: string;
   onDetailsClick?: () => void;
+  icon?: string;
 }
 
-export function ServiceCard({ title, description, image, onDetailsClick }: ServiceCardProps) {
+export function ServiceCard({ title, description, image, onDetailsClick, icon }: ServiceCardProps) {
   return (
     <div className="group rounded-xl overflow-hidden bg-[#171717] hover:shadow-2xl hover:shadow-[#f59e0b]/10 transition-all duration-300 h-full flex flex-col">
       <div className="aspect-video overflow-hidden bg-gray-900">
@@ -19,7 +20,8 @@ export function ServiceCard({ title, description, image, onDetailsClick }: Servi
         />
       </div>
       <div className="p-6 sm:p-8 space-y-4 flex flex-col flex-1">
-        <h3 className="text-xl sm:text-2xl font-bold text-white min-h-[3.5rem] flex items-center">
+        <h3 className="text-xl sm:text-2xl font-bold text-white min-h-[3.5rem] flex items-center gap-3">
+          {icon && <img src={icon} alt="" className="w-8 h-8 object-cover" />}
           {title}
         </h3>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1 whitespace-pre-wrap">
