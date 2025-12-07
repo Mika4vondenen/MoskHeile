@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-[#262626] pt-28 sm:pt-32 pb-16 sm:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ServiceHero
-          title="Unsere Services"
+          title="MEINE SERVICES"
           subtitle="Wählen Sie den passenden Service-Bereich für Ihre Bedürfnisse."
         />
 
