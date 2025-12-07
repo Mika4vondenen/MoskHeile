@@ -17,6 +17,8 @@ export default function Footer() {
                 href="https://www.instagram.com/dimaa_mamon/"
                 className="bg-white/10 hover:bg-[#F5B700] w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram size={18} className="sm:w-5 sm:h-5" />
               </a>
