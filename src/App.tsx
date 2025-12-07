@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
+import EventServicesPage from './pages/EventServicesPage';
+import BusinessServicesPage from './pages/BusinessServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
 import DatenschutzPage from './pages/DatenschutzPage';
@@ -30,6 +32,8 @@ function App() {
             />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/event" element={<EventServicesPage />} />
+            <Route path="/services/business" element={<BusinessServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/gallery-test" element={<GalleryTestPage />} />
             <Route path="/impressum" element={<ImpressumPage />} />

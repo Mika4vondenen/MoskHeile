@@ -1,137 +1,41 @@
-import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { BlurFade } from '../components/ui/blur-fade';
-import { useAnimation } from '../context/AnimationContext';
-import { ServicesTabs } from '../components/ui/services-tabs';
-import { ServicesContent } from '../components/ui/services-content';
+import { Link } from 'react-router-dom';
+import { ServiceHero } from '../components/ui/service-hero';
 
 export default function ServicesPage() {
-  const [activeTab, setActiveTab] = useState<'photography' | 'videography'>('photography');
-  const navigate = useNavigate();
-  const { showInitialAnimation } = useAnimation();
-
-  const photographyServices = [
-    {
-      id: 'event-photography',
-      title: 'Event-Fotografie',
-      description: 'Professionelle Eventdokumentation mit starken Momenten und modernem Look. Perfekt für Festivals, Konzerte und Firmenevents.',
-      image: 'https://images.pexels.com/photos/1763814/pexels-photo-1763814.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/services/event-fotografie',
-    },
-    {
-      id: 'business-photography',
-      title: 'Business-Fotografie',
-      description: 'Hochwertige Business-Portraits, Produktfotos und Website-Content für Ihr Unternehmen. Professionell, modern und sofort einsatzbereit.',
-      image: 'https://images.pexels.com/photos/3962629/pexels-photo-3962629.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/services/business-fotografie',
-    },
-  ];
-
-  const videographyServices = [
-    {
-      id: 'event-videography',
-      title: 'Event-Videografie',
-      description: 'Dynamische Eventfilme und Aftermovies, die Ihre Veranstaltung unvergesslich machen. Mit klarer Bildsprache und emotionalen Momenten.',
-      image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/services/event-videografie',
-    },
-    {
-      id: 'business-videography',
-      title: 'Business-Videografie',
-      description: 'Imagefilme, Werbevideos und Social-Media-Content für Ihre Marke. Überzeugen Sie mit professionellen Videos, die Wirkung zeigen.',
-      image: 'https://images.pexels.com/photos/4970330/pexels-photo-4970330.jpeg?auto=compress&cs=tinysrgb&w=800',
-      link: '/services/business-videografie',
-    },
-  ];
-
-  const getNavHeight = () => {
-    if (window.innerWidth < 640) return 80;
-    return 100;
-  };
-
-  const scrollToContact = () => {
-    navigate('/');
-    setTimeout(() => {
-      const element = document.getElementById('contact');
-      if (element) {
-        const navHeight = getNavHeight();
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - navHeight;
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   return (
-    <div>
-      <section className="pt-28 sm:pt-32 py-16 sm:py-24" style={{ backgroundColor: '#262626' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="services-header">
-            <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 dm-serif-text-regular" style={{ color: '#f59e0b' }}>
-                Unsere Foto-, Video- & Editing-Services
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-                Von der ersten Idee bis zum fertigen Projekt – Ich begleite Sie mit Professionalität und Leidenschaft.
-              </p>
-            </div>
-          </BlurFade>
+    <div className="min-h-screen bg-[#262626] pt-28 sm:pt-32 pb-16 sm:pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ServiceHero
+          title="Unsere Services"
+          subtitle="Von der ersten Idee bis zum fertigen Projekt – Ich begleite Sie mit Professionalität und Leidenschaft."
+        />
 
-          <BlurFade delay={0.5} inView={showInitialAnimation} sessionKey="services-tabs-content">
-            <ServicesTabs activeTab={activeTab} onTabChange={setActiveTab} />
-            <ServicesContent
-              activeTab={activeTab}
-              photographyServices={photographyServices}
-              videographyServices={videographyServices}
-            />
-          </BlurFade>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-2xl mx-auto mt-12 sm:mt-16">
+          <Link
+            to="/services/event"
+            className="w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#F5B700] to-[#ffc61a] p-8 sm:p-12 text-center hover:shadow-2xl hover:shadow-[#f59e0b]/20 transition-all duration-300 transform hover:scale-105"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1F44] mb-3">
+              Event
+            </h2>
+            <p className="text-[#0A1F44] text-sm sm:text-base font-medium">
+              Festivals, Konzerte & Live-Events
+            </p>
+          </Link>
 
-          <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="services-editing">
-            <section className="mb-16 sm:mb-20 lg:mb-24">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#f59e0b] tracking-widest mb-8 sm:mb-10">
-                POST-PRODUCTION / EDITING
-              </h2>
-
-              <div className="max-w-3xl mx-auto text-center space-y-6 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
-                <h3 className="text-xl sm:text-2xl font-bold text-white">
-                  Professionelles Video-Editing & Post-Production
-                </h3>
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                  Seit über fünf Jahren verwandle ich rohes Videomaterial in modernen, hochwertigen Content. Videoschnitt, Farbkorrektur, Retusche und Motion Graphics – alles aus einer Hand.
-                </p>
-                <div className="flex justify-center">
-                  <a
-                    href="/services/editing"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
-                  >
-                    Mehr erfahren
-                    <ArrowRight size={16} />
-                  </a>
-                </div>
-              </div>
-            </section>
-          </BlurFade>
-
-          <BlurFade delay={1} inView={showInitialAnimation} sessionKey="services-cta">
-            <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-xl text-center">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
-                Starten wir Ihr Projekt!
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
-                Kontaktieren Sie mich für ein unverbindliches Erstgespräch und lassen Sie uns gemeinsam Ihre Vision verwirklichen.
-              </p>
-              <button
-                onClick={scrollToContact}
-                className="group inline-flex items-center gap-2 sm:gap-3 bg-[#F5B700] text-[#0A1F44] px-5 sm:px-8 py-2 sm:py-4 rounded-lg font-bold text-sm sm:text-base lg:text-lg hover:bg-[#ffc61a] transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                Jetzt Beratung anfragen
-                <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300" size={18} />
-              </button>
-            </div>
-          </BlurFade>
+          <Link
+            to="/services/business"
+            className="w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-br from-[#0A1F44] to-[#0d2a5c] p-8 sm:p-12 text-center hover:shadow-2xl hover:shadow-[#0A1F44]/40 transition-all duration-300 transform hover:scale-105"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#F5B700] mb-3">
+              Business
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base font-medium">
+              Unternehmen, Produkte & Marketing
+            </p>
+          </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
