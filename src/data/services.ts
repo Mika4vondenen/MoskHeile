@@ -1,4 +1,5 @@
 import eventPhoto from '../../assets/SON03067.webp';
+import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
 
 export interface Service {
   id: string;
@@ -20,7 +21,7 @@ export const eventServices: Service[] = [
     id: 'event-videography',
     title: 'Event-Videografie',
     description: 'Videos, die euer Event gut und verständlich zeigen – von Aftermovies über Social-Media-Clips bis zu Konzertmitschnitten.\n\nIdeal für:\n• Aftermovies\n• Konzertvideos\n• Social-Media-Clips\n• Event-Recaps',
-    image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: eventVideoPhoto,
     link: '/services/event/videografie',
   },
   {
