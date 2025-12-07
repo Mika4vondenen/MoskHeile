@@ -53,7 +53,7 @@ export const businessServices: Service[] = [
   {
     id: 'business-editing',
     title: 'Business-Editing',
-    description: 'Professionelle Nachbearbeitung für Ihre Unternehmensvideos. Von Farbkorrektur bis Motion Graphics – alles aus einer Hand.',
+    description: 'Editing für Unternehmen: klarer Schnitt, passende Farben und Optimierungen für Foto- und Videomaterial aus Betrieb, Büro oder Baustelle.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Produkt- & Baustellenmaterial',
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/editing',
   },
