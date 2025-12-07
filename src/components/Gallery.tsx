@@ -160,20 +160,22 @@ export default function Gallery() {
         </BlurFade>
 
         <BlurFade delay={0.5} inView sessionKey="gallery-grid">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {galleryItems.map((item, index) => (
             <div
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className="group relative overflow-hidden rounded-lg cursor-pointer aspect-square bg-gray-900"
+              className="group relative overflow-hidden rounded-lg cursor-pointer bg-[#1a1a1a] shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="relative w-full">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 group-hover:bg-white/30 transition-colors">
