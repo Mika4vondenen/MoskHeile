@@ -46,7 +46,7 @@ export const businessServices: Service[] = [
   {
     id: 'business-videography',
     title: 'Business-Videografie',
-    description: 'Imagefilme, Werbevideos und Social-Media-Content für Ihre Marke. Überzeugen Sie mit professionellen Videos, die Wirkung zeigen.',
+    description: 'Videos, die zeigen, wer ihr seid und was ihr macht – klar, authentisch und passend zu eurer Marke. Für mehr Sichtbarkeit und Vertrauen.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Projekt- & Baustellenvideos',
     image: 'https://images.pexels.com/photos/4970330/pexels-photo-4970330.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/videografie',
   },
