@@ -60,7 +60,6 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#f59e0b] mb-6 sm:mb-8">Schreiben Sie uns</h3>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Name *</label>
