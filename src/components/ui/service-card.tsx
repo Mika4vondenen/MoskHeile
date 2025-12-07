@@ -22,7 +22,7 @@ export function ServiceCard({ title, description, image, onDetailsClick }: Servi
         <h3 className="text-xl sm:text-2xl font-bold text-white min-h-[3.5rem] flex items-center">
           {title}
         </h3>
-        <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1">
+        <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1 whitespace-pre-wrap">
           {description}
         </p>
         <button
