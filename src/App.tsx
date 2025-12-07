@@ -9,6 +9,7 @@ import ServicesPage from './pages/ServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
 import DatenschutzPage from './pages/DatenschutzPage';
+import GalleryTestPage from './pages/GalleryTestPage';
 import { AnimationProvider } from './context/AnimationContext';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/gallery-test" element={<GalleryTestPage />} />
             <Route path="/impressum" element={<ImpressumPage />} />
             <Route path="/datenschutz" element={<DatenschutzPage />} />
           </Routes>
