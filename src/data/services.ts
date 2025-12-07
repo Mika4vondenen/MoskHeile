@@ -1,5 +1,6 @@
 import eventPhoto from '../../assets/SON03067.webp';
 import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
+import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
 import businessPhotoPhoto from '../../assets/20230701-SON06592.webp';
 
 export interface Service {
@@ -29,7 +30,7 @@ export const eventServices: Service[] = [
     id: 'event-editing',
     title: 'Event-Editing',
     description: 'Nachbearbeitung für Event-Fotos und Event-Videos.\nSaubere Farben, ruhige Schnitte und Optimierungen, damit euer Eventmaterial gut aussieht und direkt nutzbar ist.\n\nIdeal für:\n• Aftermovies\n• Konzert- & Festivalvideos\n• Social-Media-Clips\n• Event-Fotos',
-    image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: eventEditingPhoto,
     link: '/services/event/editing',
   },
 ];
