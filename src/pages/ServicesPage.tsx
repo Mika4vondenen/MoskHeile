@@ -1,11 +1,49 @@
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { BlurFade } from '../components/ui/blur-fade';
 import { useAnimation } from '../context/AnimationContext';
+import { ServicesTabs } from '../components/ui/services-tabs';
+import { ServicesContent } from '../components/ui/services-content';
 
 export default function ServicesPage() {
+  const [activeTab, setActiveTab] = useState<'photography' | 'videography'>('photography');
   const navigate = useNavigate();
   const { showInitialAnimation } = useAnimation();
+
+  const photographyServices = [
+    {
+      id: 'event-photography',
+      title: 'Event-Fotografie',
+      description: 'Professionelle Eventdokumentation mit starken Momenten und modernem Look. Perfekt für Festivals, Konzerte und Firmenevents.',
+      image: 'https://images.pexels.com/photos/1763814/pexels-photo-1763814.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/services/event-fotografie',
+    },
+    {
+      id: 'business-photography',
+      title: 'Business-Fotografie',
+      description: 'Hochwertige Business-Portraits, Produktfotos und Website-Content für Ihr Unternehmen. Professionell, modern und sofort einsatzbereit.',
+      image: 'https://images.pexels.com/photos/3962629/pexels-photo-3962629.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/services/business-fotografie',
+    },
+  ];
+
+  const videographyServices = [
+    {
+      id: 'event-videography',
+      title: 'Event-Videografie',
+      description: 'Dynamische Eventfilme und Aftermovies, die Ihre Veranstaltung unvergesslich machen. Mit klarer Bildsprache und emotionalen Momenten.',
+      image: 'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/services/event-videografie',
+    },
+    {
+      id: 'business-videography',
+      title: 'Business-Videografie',
+      description: 'Imagefilme, Werbevideos und Social-Media-Content für Ihre Marke. Überzeugen Sie mit professionellen Videos, die Wirkung zeigen.',
+      image: 'https://images.pexels.com/photos/4970330/pexels-photo-4970330.jpeg?auto=compress&cs=tinysrgb&w=800',
+      link: '/services/business-videografie',
+    },
+  ];
 
   const getNavHeight = () => {
     if (window.innerWidth < 640) return 80;
@@ -31,7 +69,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="services-header">
             <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 dm-serif-text-regular" style={{ color: '#f59e0b' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 dm-serif-text-regular" style={{ color: '#f59e0b' }}>
                 Unsere Foto-, Video- & Editing-Services
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -40,84 +78,13 @@ export default function ServicesPage() {
             </div>
           </BlurFade>
 
-          <BlurFade delay={0.5} inView={showInitialAnimation} sessionKey="services-categories">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-16 sm:mb-20 lg:mb-24">
-              <section className="space-y-10 sm:space-y-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#f59e0b] tracking-widest mb-8 sm:mb-10">
-                  EVENT
-                </h2>
-
-                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
-                    Event-Fotografie
-                  </h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Professionelle Eventdokumentation mit starken Momenten und modernem Look. Perfekt für Festivals, Konzerte und Firmenevents.
-                  </p>
-                  <Link
-                    to="/services/event-fotografie"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
-                  >
-                    Mehr erfahren
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-
-                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
-                    Event-Videografie
-                  </h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Dynamische Eventfilme und Aftermovies, die Ihre Veranstaltung unvergesslich machen. Mit klarer Bildsprache und emotionalen Momenten.
-                  </p>
-                  <Link
-                    to="/services/event-videografie"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
-                  >
-                    Mehr erfahren
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </section>
-
-              <section className="space-y-10 sm:space-y-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#f59e0b] tracking-widest mb-8 sm:mb-10">
-                  BUSINESS
-                </h2>
-
-                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
-                    Business-Fotografie
-                  </h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Hochwertige Business-Portraits, Produktfotos und Website-Content für Ihr Unternehmen. Professionell, modern und sofort einsatzbereit.
-                  </p>
-                  <Link
-                    to="/services/business-fotografie"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
-                  >
-                    Mehr erfahren
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-
-                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white">
-                    Business-Videografie
-                  </h3>
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                    Imagefilme, Werbevideos und Social-Media-Content für Ihre Marke. Überzeugen Sie mit professionellen Videos, die Wirkung zeigen.
-                  </p>
-                  <Link
-                    to="/services/business-videografie"
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
-                  >
-                    Mehr erfahren
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </section>
-            </div>
+          <BlurFade delay={0.5} inView={showInitialAnimation} sessionKey="services-tabs-content">
+            <ServicesTabs activeTab={activeTab} onTabChange={setActiveTab} />
+            <ServicesContent
+              activeTab={activeTab}
+              photographyServices={photographyServices}
+              videographyServices={videographyServices}
+            />
           </BlurFade>
 
           <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="services-editing">
@@ -134,13 +101,13 @@ export default function ServicesPage() {
                   Seit über fünf Jahren verwandle ich rohes Videomaterial in modernen, hochwertigen Content. Videoschnitt, Farbkorrektur, Retusche und Motion Graphics – alles aus einer Hand.
                 </p>
                 <div className="flex justify-center">
-                  <Link
-                    to="/services/editing"
+                  <a
+                    href="/services/editing"
                     className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300"
                   >
                     Mehr erfahren
                     <ArrowRight size={16} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </section>
