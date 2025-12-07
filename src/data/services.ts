@@ -39,7 +39,7 @@ export const businessServices: Service[] = [
   {
     id: 'business-photography',
     title: 'Business-Fotografie',
-    description: 'Hochwertige Business-Portraits, Produktfotos und Website-Content für Ihr Unternehmen. Professionell, modern und sofort einsatzbereit.',
+    description: 'Echte Menschen, klare Bilder, starke Wirkung. Ob im Büro, im Laden oder draußen auf der Baustelle – ich fange eure Arbeit so ein, wie sie wirklich ist.\n\nIdeal für:\n• Team- & Portraitfotos\n• Produkte & Markenbilder\n• Baustellen-Reportagen\n• Website- & Social-Media-Content',
     image: businessPhotoPhoto,
     link: '/services/business/fotografie',
   },
