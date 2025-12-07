@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Linkedin, Mail } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,32 +14,11 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/dimaa_mamon/"
                 className="bg-white/10 hover:bg-[#F5B700] w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
                 <Instagram size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-white/10 hover:bg-[#F5B700] w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-white/10 hover:bg-[#F5B700] w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="mailto:info@editbymosk.de"
-                className="bg-white/10 hover:bg-[#F5B700] w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="E-Mail"
-              >
-                <Mail size={18} className="sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
