@@ -1,5 +1,6 @@
 import { Home, Info, Image, Mail, Zap } from 'lucide-react';
 import { NavBar } from './ui/tubelight-navbar';
+import { MobileDropdown } from './ui/mobile-dropdown';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import logoIcon from '../../public/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
@@ -115,9 +116,15 @@ export default function Navigation() {
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },
   ]
 
+  const mobileNavItems = navItems.map(item => ({
+    name: item.name,
+    icon: item.icon || Mail,
+    onClick: item.onClick,
+  }))
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-black py-3 px-4 sm:py-4">
-      <div className="flex justify-between items-start max-w-7xl mx-auto">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
         <button
           onClick={goToHome}
           className="hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
@@ -125,7 +132,12 @@ export default function Navigation() {
           <img src={logoIcon} alt="Logo" className="h-12 sm:h-16" />
         </button>
         <div className="flex-shrink-0">
-          <NavBar items={navItems} activeSection={activeSection} />
+          <div className="hidden md:block">
+            <NavBar items={navItems} activeSection={activeSection} />
+          </div>
+          <div className="md:hidden">
+            <MobileDropdown items={mobileNavItems} activeSection={activeSection} />
+          </div>
         </div>
       </div>
     </div>
