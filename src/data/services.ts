@@ -1,5 +1,6 @@
 import eventPhoto from '../../assets/SON03067.webp';
 import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
+import businessPhotoPhoto from '../../assets/20230701-SON06592.webp';
 
 export interface Service {
   id: string;
@@ -38,7 +39,7 @@ export const businessServices: Service[] = [
     id: 'business-photography',
     title: 'Business-Fotografie',
     description: 'Hochwertige Business-Portraits, Produktfotos und Website-Content für Ihr Unternehmen. Professionell, modern und sofort einsatzbereit.',
-    image: 'https://images.pexels.com/photos/3962629/pexels-photo-3962629.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: businessPhotoPhoto,
     link: '/services/business/fotografie',
   },
   {
