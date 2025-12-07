@@ -1,7 +1,7 @@
 import eventPhoto from '../../assets/SON03067.webp';
 import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
 import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
-import businessPhotoPhoto from '../../assets/20230701-SON06592.webp';
+import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
 
 export interface Service {
   id: string;
