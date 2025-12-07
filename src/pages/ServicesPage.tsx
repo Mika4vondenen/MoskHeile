@@ -47,7 +47,7 @@ export default function ServicesPage() {
                   EVENT
                 </h2>
 
-                <div className="space-y-5">
+                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
                     Event-Fotografie
                   </h3>
@@ -63,7 +63,7 @@ export default function ServicesPage() {
                   </Link>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
                     Event-Videografie
                   </h3>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                   BUSINESS
                 </h2>
 
-                <div className="space-y-5">
+                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
                     Business-Fotografie
                   </h3>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                   </Link>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-5 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
                   <h3 className="text-xl sm:text-2xl font-bold text-white">
                     Business-Videografie
                   </h3>
@@ -126,7 +126,7 @@ export default function ServicesPage() {
                 POST-PRODUCTION / EDITING
               </h2>
 
-              <div className="max-w-3xl mx-auto text-center space-y-6">
+              <div className="max-w-3xl mx-auto text-center space-y-6 p-6 sm:p-8 rounded-lg" style={{ backgroundColor: '#171717' }}>
                 <h3 className="text-xl sm:text-2xl font-bold text-white">
                   Professionelles Video-Editing & Post-Production
                 </h3>
