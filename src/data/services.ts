@@ -1,3 +1,5 @@
+import eventPhoto from '../../assets/SON03067.webp';
+
 export interface Service {
   id: string;
   title: string;
@@ -11,7 +13,7 @@ export const eventServices: Service[] = [
     id: 'event-photography',
     title: 'Event-Fotografie',
     description: 'Klare, saubere Bilder eurer Veranstaltung. Ob Festival, Konzert oder private Feier – ich dokumentiere die wichtigsten Momente übersichtlich und zuverlässig.\n\nIdeal für:\n• Events & Festivals\n• Firmenfeiern\n• Konzerte\n• Private Feiern',
-    image: 'https://images.pexels.com/photos/1763814/pexels-photo-1763814.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: eventPhoto,
     link: '/services/event/fotografie',
   },
   {

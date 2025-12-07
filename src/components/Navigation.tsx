@@ -1,10 +1,8 @@
-import { Home, Zap, Info, Image, Mail } from 'lucide-react';
+import { Home, Info, Image, Mail, Zap } from 'lucide-react';
 import { NavBar } from './ui/tubelight-navbar';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
-import logo from '../../public/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
 import homeIcon from '../../assets/ChatGPT Image 20. Nov. 2025, 22_43_05.png';
-import servicesIcon from '../../public/chatgpt_image_6._dez._2025,_17_52_55.png';
 
 export default function Navigation() {
   const navigate = useNavigate();
@@ -110,7 +108,7 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'Home', image: homeIcon, onClick: () => goToHome() },
-    { name: 'Services', mobileImage: servicesIcon, onClick: () => goToServices() },
+    { name: 'Services', icon: Zap, onClick: () => goToServices() },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },
@@ -123,11 +121,9 @@ export default function Navigation() {
           onClick={goToHome}
           className="hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
         >
-          <img
-            src={logo}
-            alt="edit by mosk"
-            className="h-16 sm:h-20 w-auto"
-          />
+          <div className="text-[#F5B700] text-2xl sm:text-3xl font-bold">
+            MOSK
+          </div>
         </button>
         <div className="flex-shrink-0">
           <NavBar items={navItems} activeSection={activeSection} />
