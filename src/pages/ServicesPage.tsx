@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { Users, Briefcase, ArrowRight } from 'lucide-react';
 import { ServiceHero } from '../components/ui/service-hero';
 import { BlurFade } from '../components/ui/blur-fade';
+import { useAnimation } from '../context/AnimationContext';
 
 export default function ServicesPage() {
   const navigate = useNavigate();
+  const { showInitialAnimation } = useAnimation();
 
   const handlePrivateCustomers = () => {
     navigate('/services/event');
@@ -17,12 +19,14 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#262626] pt-28 sm:pt-32 pb-16 sm:pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ServiceHero
-          title="ALLES AUS EINER HAND."
-          subtitle="Wählen Sie den passenden Service-Bereich für Ihre Bedürfnisse."
-        />
+        <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="services-hero">
+          <ServiceHero
+            title="ALLES AUS EINER HAND."
+            subtitle="Wählen Sie den passenden Service-Bereich für Ihre Bedürfnisse."
+          />
+        </BlurFade>
 
-        <BlurFade delay={0.3} inView sessionKey="services-choice">
+        <BlurFade delay={0.5} inView={showInitialAnimation} sessionKey="services-choice">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-5xl mx-auto">
             <button
               onClick={handlePrivateCustomers}
@@ -70,7 +74,7 @@ export default function ServicesPage() {
           </div>
         </BlurFade>
 
-        <BlurFade delay={0.5} inView sessionKey="services-info">
+        <BlurFade delay={0.75} inView={showInitialAnimation} sessionKey="services-info">
           <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-xl text-center mt-12 sm:mt-16 lg:mt-20">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
               Nicht sicher, welcher Bereich zu Ihnen passt?
