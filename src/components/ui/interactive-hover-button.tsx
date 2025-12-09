@@ -15,7 +15,7 @@ const InteractiveHoverButton = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        "group relative w-28 sm:w-32 cursor-pointer overflow-hidden rounded-full border bg-background p-2 text-center font-semibold text-sm sm:text-base",
+        "group relative w-40 sm:w-48 cursor-pointer overflow-hidden rounded-full border bg-background p-3 text-center font-semibold text-base sm:text-lg",
         className,
       )}
       {...props}
