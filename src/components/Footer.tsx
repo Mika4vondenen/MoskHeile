@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <h3 className="text-xl sm:text-2xl font-bold text-[#F5B700] mb-3 sm:mb-4">Edit by MOSK</h3>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-3 sm:mb-4">
-              Professionelle Foto-, Video- und Editing-Dienstleistungen für Privat- und Geschäftskunden in ganz Deutschland.
+              Ich verwandle Ihre Vision in ein visuelles Produkt-für Privatkunden und Unternehmen in Belgien, Luxemburg und Deutschland.
             </p>
             <div className="flex gap-3">
               <a
