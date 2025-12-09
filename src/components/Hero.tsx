@@ -44,7 +44,6 @@ export default function Hero() {
         <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="hero-title">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight" style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}>
             <div>FOTOS. VIDEOS. EDITING.</div>
-            <span className="text-[#f59e0b]">ALLES AUS EINER HAND.</span>
           </h1>
         </BlurFade>
 
