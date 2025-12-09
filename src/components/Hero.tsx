@@ -42,7 +42,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 text-center">
         <BlurFade delay={0.25} inView={showInitialAnimation} sessionKey="hero-title">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight" style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400 }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style={{ fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400, color: '#f59e0b' }}>
             <div>FOTOS. VIDEOS. EDITING.</div>
           </h1>
         </BlurFade>
