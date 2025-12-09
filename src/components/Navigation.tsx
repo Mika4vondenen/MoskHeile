@@ -124,7 +124,7 @@ export default function Navigation() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-black py-3 px-4 sm:py-4">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
+      <div className="flex justify-between items-center w-full">
         <button
           onClick={goToHome}
           className="hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
