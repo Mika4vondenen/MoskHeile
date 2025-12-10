@@ -256,7 +256,7 @@ export default function Contact() {
              </div>
              <div className="bg-black p-6 sm:p-8 rounded-xl">
                <h4 className="text-lg sm:text-2xl font-bold text-white mb-3 sm:mb-4">Starten wir Ihr Projekt.</h4>
-               <p className="text-white mb-4 sm:mb-6 text-sm sm:text-base">Ob Portrait-, Produkt- oder Eventfotografie, Videoproduktion jeglicher Art oder Bearbeitung von Videomaterial.</p>
+               <p className="text-white mb-4 sm:mb-6 text-sm sm:text-base">Egal ob Fotografie, Videoproduktion oder professionelle Videobearbeitung-ich setze Ihr Projekt zuverlässig um.</p>
                <div className="flex items-center gap-2 text-[#FFB400] font-semibold text-sm sm:text-base"><Clock size={18} /><span>Antwort innerhalb von 48 Stunden</span></div>
              </div>
           </div>
