@@ -72,7 +72,7 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-[#262626]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f59e0b] mb-3 sm:mb-4 uppercase tracking-widest">Kontakt aufnehmen</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#f59e0b] mb-3 sm:mb-4 uppercase tracking-widest">Kontakt aufnehmen</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
