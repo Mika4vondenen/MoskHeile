@@ -2,17 +2,18 @@ name: Deploy to Netlify
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Node
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -23,10 +24,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Netlify
+      - name: Deploy to Netlify via API
         run: |
-          npm install -g netlify-cli
-          netlify deploy --prod \
-            --dir=dist \
-            --site=$NETLIFY_SITE_ID \
-            --auth=$NETLIFY_AUTH_TOKEN
+          curl -X POST \
+            -H "Content-Type: application/zip" \
+            -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" \
+            --data-binary @"dist.zip" \
+            "https://api.netlify.com/api/v1/sites/${{ secrets.NETLIFY_SITE_ID }}/deploys"
+        shell: bash
+
+      - name: Zip dist folder
+        run: zip -r dist.zip dist
