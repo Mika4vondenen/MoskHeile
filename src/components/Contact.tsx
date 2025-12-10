@@ -10,6 +10,7 @@ export default function Contact() {
     vorname: '',
     nachname: '',
     unternehmensname: '',
+    ansprechpartner: '',
     email: '',
     telefonnummer: '',
     message: ''
@@ -25,13 +26,17 @@ export default function Contact() {
 
     try {
       const submissionData = {
-        client_type: formData.kundentyp === 'Privatperson' ? 'private' : 'company',
-        vorname: formData.vorname,
-        nachname: formData.nachname,
-        company_name: formData.kundentyp === 'Unternehmen' ? formData.unternehmensname : null,
-        email: formData.email,
+        kundentyp: formData.kundentyp,
+        unternehmensname: formData.kundentyp === 'Unternehmen' ? formData.unternehmensname : null,
+        ansprechpartner: formData.kundentyp === 'Unternehmen' ? formData.ansprechpartner : null,
+        vorname: formData.kundentyp === 'Privatperson' ? formData.vorname : null,
+        nachname: formData.kundentyp === 'Privatperson' ? formData.nachname : null,
         telefonnummer: formData.telefonnummer || null,
+        email: formData.email,
         message: formData.message,
+        name: formData.kundentyp === 'Privatperson'
+          ? `${formData.vorname} ${formData.nachname}`
+          : formData.unternehmensname,
         created_at: new Date().toISOString(),
       };
 
@@ -47,6 +52,7 @@ export default function Contact() {
         vorname: '',
         nachname: '',
         unternehmensname: '',
+        ansprechpartner: '',
         email: '',
         telefonnummer: '',
         message: ''
@@ -131,34 +137,6 @@ export default function Contact() {
               {formData.kundentyp === 'Unternehmen' && (
                 <>
                   <div>
-                    <label htmlFor="vorname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Vorname *</label>
-                    <input
-                      type="text"
-                      id="vorname"
-                      name="vorname"
-                      value={formData.vorname}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
-                      placeholder="Ihr Vorname"
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="nachname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Nachname *</label>
-                    <input
-                      type="text"
-                      id="nachname"
-                      name="nachname"
-                      value={formData.nachname}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
-                      placeholder="Ihr Nachname"
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
                     <label htmlFor="unternehmensname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Name des Unternehmens *</label>
                     <input
                       type="text"
@@ -169,6 +147,20 @@ export default function Contact() {
                       required
                       className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
                       placeholder="Unternehmensname"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="ansprechpartner" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Ansprechpartner *</label>
+                    <input
+                      type="text"
+                      id="ansprechpartner"
+                      name="ansprechpartner"
+                      value={formData.ansprechpartner}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Ihr Name"
                       disabled={isSubmitting}
                     />
                   </div>
