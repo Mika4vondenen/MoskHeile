@@ -1,14 +1,11 @@
-import { ArrowRight } from 'lucide-react';
-
 interface ServiceCardProps {
   title: string;
   description: string;
   image: string;
-  onDetailsClick?: () => void;
   icon?: string;
 }
 
-export function ServiceCard({ title, description, image, onDetailsClick, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, image, icon }: ServiceCardProps) {
   return (
     <div className="group rounded-xl overflow-hidden bg-[#171717] hover:shadow-2xl hover:shadow-[#f59e0b]/10 transition-all duration-300 h-full flex flex-col">
       <div className="aspect-video overflow-hidden bg-gray-900">
@@ -27,13 +24,6 @@ export function ServiceCard({ title, description, image, onDetailsClick, icon }:
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1 whitespace-pre-wrap">
           {description}
         </p>
-        <button
-          onClick={onDetailsClick}
-          className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#f59e0b] text-[#f59e0b] rounded-lg font-semibold text-sm sm:text-base hover:bg-[#f59e0b] hover:text-black hover:shadow-lg hover:shadow-[#f59e0b]/20 transition-all duration-300 w-full justify-center"
-        >
-          Details zum Service
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-        </button>
       </div>
     </div>
   );
