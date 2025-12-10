@@ -33,11 +33,7 @@ export default function Contact() {
         nachname: formData.kundentyp === 'Privatperson' ? formData.nachname : null,
         telefonnummer: formData.telefonnummer || null,
         email: formData.email,
-        message: formData.message,
-        name: formData.kundentyp === 'Privatperson'
-          ? `${formData.vorname} ${formData.nachname}`
-          : formData.unternehmensname,
-        created_at: new Date().toISOString(),
+        message: formData.message
       };
 
       const { error } = await supabase
