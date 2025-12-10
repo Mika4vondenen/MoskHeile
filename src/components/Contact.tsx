@@ -1,15 +1,21 @@
 import { Mail, Phone, MapPin, Send, Clock, Loader2, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
-import { supabase } from '../lib/supabase'; // Das hier hat gefehlt!
+import { supabase } from '../lib/supabase';
+
+type Kundentyp = 'Privatperson' | 'Unternehmen';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
+    kundentyp: 'Privatperson' as Kundentyp,
+    vorname: '',
+    nachname: '',
+    ansprechpartner: '',
+    unternehmensname: '',
     email: '',
-    phone: '',
+    telefonnummer: '',
     message: ''
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({ type: null, message: '' });
 
@@ -19,23 +25,43 @@ export default function Contact() {
     setStatus({ type: null, message: '' });
 
     try {
-      // JETZT senden wir wirklich an Supabase
+      const submissionData: Record<string, any> = {
+        kundentyp: formData.kundentyp,
+        email: formData.email,
+        telefonnummer: formData.telefonnummer || null,
+        message: formData.message,
+        created_at: new Date().toISOString(),
+      };
+
+      if (formData.kundentyp === 'Privatperson') {
+        submissionData.vorname = formData.vorname;
+        submissionData.nachname = formData.nachname;
+        submissionData.ansprechpartner = null;
+        submissionData.unternehmensname = null;
+      } else {
+        submissionData.vorname = null;
+        submissionData.nachname = null;
+        submissionData.ansprechpartner = formData.ansprechpartner;
+        submissionData.unternehmensname = formData.unternehmensname;
+      }
+
       const { error } = await supabase
         .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            message: formData.message,
-            created_at: new Date().toISOString(),
-          }
-        ]);
+        .insert([submissionData]);
 
       if (error) throw error;
 
       setStatus({ type: 'success', message: 'Nachricht erfolgreich gesendet!' });
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({
+        kundentyp: 'Privatperson',
+        vorname: '',
+        nachname: '',
+        ansprechpartner: '',
+        unternehmensname: '',
+        email: '',
+        telefonnummer: '',
+        message: ''
+      });
     } catch (error) {
       console.error('Fehler:', error);
       setStatus({ type: 'error', message: 'Fehler beim Senden.' });
@@ -44,7 +70,7 @@ export default function Contact() {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -61,21 +87,134 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div>
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              {/* Kundentyp Select */}
               <div>
-                <label htmlFor="name" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Name *</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base" placeholder="Ihr Name" disabled={isSubmitting} />
+                <label htmlFor="kundentyp" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Kundentyp *</label>
+                <select
+                  id="kundentyp"
+                  name="kundentyp"
+                  value={formData.kundentyp}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                  disabled={isSubmitting}
+                >
+                  <option value="Privatperson">Privatperson</option>
+                  <option value="Unternehmen">Unternehmen</option>
+                </select>
               </div>
+
+              {/* Conditional Fields - Privatperson */}
+              {formData.kundentyp === 'Privatperson' && (
+                <>
+                  <div>
+                    <label htmlFor="vorname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Vorname *</label>
+                    <input
+                      type="text"
+                      id="vorname"
+                      name="vorname"
+                      value={formData.vorname}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Ihr Vorname"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="nachname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Nachname *</label>
+                    <input
+                      type="text"
+                      id="nachname"
+                      name="nachname"
+                      value={formData.nachname}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Ihr Nachname"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </>
+              )}
+
+              {/* Conditional Fields - Unternehmen */}
+              {formData.kundentyp === 'Unternehmen' && (
+                <>
+                  <div>
+                    <label htmlFor="ansprechpartner" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Ansprechpartner *</label>
+                    <input
+                      type="text"
+                      id="ansprechpartner"
+                      name="ansprechpartner"
+                      value={formData.ansprechpartner}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Name des Ansprechpartners"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="unternehmensname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Name des Unternehmens *</label>
+                    <input
+                      type="text"
+                      id="unternehmensname"
+                      name="unternehmensname"
+                      value={formData.unternehmensname}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Unternehmensname"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </>
+              )}
+
+              {/* Always Visible Fields */}
               <div>
-                <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">E-Mail *</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base" placeholder="ihre@email.de" disabled={isSubmitting} />
+                <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">E-Mail Adresse *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                  placeholder="ihre@email.de"
+                  disabled={isSubmitting}
+                />
               </div>
+
               <div>
-                <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Telefon</label>
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base" placeholder="Optional" disabled={isSubmitting} />
+                <label htmlFor="telefonnummer" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Telefonnummer</label>
+                <input
+                  type="tel"
+                  id="telefonnummer"
+                  name="telefonnummer"
+                  value={formData.telefonnummer}
+                  onChange={handleChange}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                  placeholder="Optional"
+                  disabled={isSubmitting}
+                />
               </div>
+
               <div>
                 <label htmlFor="message" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Nachricht *</label>
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none resize-none text-sm sm:text-base" placeholder="Ihre Nachricht..." disabled={isSubmitting}></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none resize-none text-sm sm:text-base"
+                  placeholder="Ihre Nachricht..."
+                  disabled={isSubmitting}
+                ></textarea>
               </div>
 
               {status.message && (
@@ -84,8 +223,22 @@ export default function Contact() {
                 </div>
               )}
 
-              <button type="submit" disabled={isSubmitting} className="group w-full bg-[#f59e0b] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base lg:text-lg hover:bg-[#ffc61a] transition-all flex items-center justify-center gap-2 sm:gap-3 disabled:opacity-50">
-                {isSubmitting ? <><Loader2 className="animate-spin" size={18} /> Wird gesendet...</> : <>Nachricht senden <Send className="group-hover:translate-x-1 transition-transform" size={18} /></>}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="group w-full bg-[#f59e0b] text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-base lg:text-lg hover:bg-[#ffc61a] transition-all flex items-center justify-center gap-2 sm:gap-3 disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="animate-spin" size={18} />
+                    Wird gesendet...
+                  </>
+                ) : (
+                  <>
+                    Nachricht senden
+                    <Send className="group-hover:translate-x-1 transition-transform" size={18} />
+                  </>
+                )}
               </button>
             </form>
           </div>
