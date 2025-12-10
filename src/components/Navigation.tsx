@@ -13,7 +13,7 @@ export default function Navigation() {
   const isScrollingRef = useRef(false);
 
   useEffect(() => {
-    if (location.pathname === '/services') {
+    if (location.pathname === '/services' || location.pathname === '/services/event' || location.pathname === '/services/business') {
       setActiveSection('Services');
       return;
     } else if (location.pathname === '/about') {
