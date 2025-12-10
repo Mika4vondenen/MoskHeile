@@ -26,7 +26,7 @@ export default function Contact() {
 
     try {
       const submissionData: Record<string, any> = {
-        kundentyp: formData.kundentyp,
+        client_type: formData.kundentyp === 'Privatperson' ? 'private' : 'company',
         email: formData.email,
         telefonnummer: formData.telefonnummer || null,
         message: formData.message,
@@ -37,12 +37,12 @@ export default function Contact() {
         submissionData.vorname = formData.vorname;
         submissionData.nachname = formData.nachname;
         submissionData.ansprechpartner = null;
-        submissionData.unternehmensname = null;
+        submissionData.company_name = null;
       } else {
         submissionData.vorname = null;
         submissionData.nachname = null;
         submissionData.ansprechpartner = formData.ansprechpartner;
-        submissionData.unternehmensname = formData.unternehmensname;
+        submissionData.company_name = formData.unternehmensname;
       }
 
       const { error } = await supabase
