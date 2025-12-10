@@ -9,7 +9,6 @@ export default function Contact() {
     kundentyp: 'Privatperson' as Kundentyp,
     vorname: '',
     nachname: '',
-    ansprechpartner: '',
     unternehmensname: '',
     email: '',
     telefonnummer: '',
@@ -25,25 +24,16 @@ export default function Contact() {
     setStatus({ type: null, message: '' });
 
     try {
-      const submissionData: Record<string, any> = {
+      const submissionData = {
         client_type: formData.kundentyp === 'Privatperson' ? 'private' : 'company',
+        vorname: formData.vorname,
+        nachname: formData.nachname,
+        company_name: formData.kundentyp === 'Unternehmen' ? formData.unternehmensname : null,
         email: formData.email,
         telefonnummer: formData.telefonnummer || null,
         message: formData.message,
         created_at: new Date().toISOString(),
       };
-
-      if (formData.kundentyp === 'Privatperson') {
-        submissionData.vorname = formData.vorname;
-        submissionData.nachname = formData.nachname;
-        submissionData.ansprechpartner = null;
-        submissionData.company_name = null;
-      } else {
-        submissionData.vorname = null;
-        submissionData.nachname = null;
-        submissionData.ansprechpartner = formData.ansprechpartner;
-        submissionData.company_name = formData.unternehmensname;
-      }
 
       const { error } = await supabase
         .from('contact_submissions')
@@ -56,7 +46,6 @@ export default function Contact() {
         kundentyp: 'Privatperson',
         vorname: '',
         nachname: '',
-        ansprechpartner: '',
         unternehmensname: '',
         email: '',
         telefonnummer: '',
@@ -142,16 +131,30 @@ export default function Contact() {
               {formData.kundentyp === 'Unternehmen' && (
                 <>
                   <div>
-                    <label htmlFor="ansprechpartner" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Ansprechpartner *</label>
+                    <label htmlFor="vorname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Vorname *</label>
                     <input
                       type="text"
-                      id="ansprechpartner"
-                      name="ansprechpartner"
-                      value={formData.ansprechpartner}
+                      id="vorname"
+                      name="vorname"
+                      value={formData.vorname}
                       onChange={handleChange}
                       required
                       className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
-                      placeholder="Name des Ansprechpartners"
+                      placeholder="Ihr Vorname"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="nachname" className="block text-xs sm:text-sm font-semibold text-gray-300 mb-2">Nachname *</label>
+                    <input
+                      type="text"
+                      id="nachname"
+                      name="nachname"
+                      value={formData.nachname}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gray-300 bg-[#171717] text-white focus:border-[#f59e0b] outline-none text-sm sm:text-base"
+                      placeholder="Ihr Nachname"
                       disabled={isSubmitting}
                     />
                   </div>
