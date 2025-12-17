@@ -5,8 +5,8 @@ import { BlurFade } from './ui/blur-fade';
 import { useAnimation } from '../context/AnimationContext';
 import heroImg1 from '../../assets/20231030-son05544-verbessert-rr.jpg';
 import heroImg2 from '../../assets/20250907-msk09631-verbessert-rr-2.jpg';
-import heroImg3 from '../../assets/SON03067.webp';
-import heroImg4 from '../../assets/20230813-SON08196-Verbessert-RR.webp';
+import heroImg3 from '../../assets/20250907-msk09631-verbessert-rr-2.jpg';
+import heroImg4 from '../../assets/dslr_camera_lens_original_669131 copy.jpg';
 
 export default function Hero() {
   const navigate = useNavigate();
