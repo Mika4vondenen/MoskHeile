@@ -41,27 +41,6 @@ export default function ImpressumPage() {
               <p>Telefon: 0176 4769 7299</p>
             </div>
           </section>
-
-          <section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Haftung für Inhalte</h2>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Die Inhalte unserer Seiten wurden mit großer Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Haftung für Links</h2>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Unsere Website enthält Links zu externen Websites Dritter. Wir haben keinen Einfluss auf deren Inhalte und können daher keine Gewähr für diese Inhalte übernehmen.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Urheberrecht</h2>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors oder Urhebers.
-            </p>
-          </section>
         </div>
       </div>
     </div>
