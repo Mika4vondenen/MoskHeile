@@ -10,7 +10,6 @@ import EventServicesPage from './pages/EventServicesPage';
 import BusinessServicesPage from './pages/BusinessServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
-import DatenschutzPage from './pages/DatenschutzPage';
 import AGBPage from './pages/AGBPage';
 import GalleryTestPage from './pages/GalleryTestPage';
 import { AnimationProvider } from './context/AnimationContext';
@@ -38,7 +37,6 @@ function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/gallery-test" element={<GalleryTestPage />} />
             <Route path="/impressum" element={<ImpressumPage />} />
-            <Route path="/datenschutz" element={<DatenschutzPage />} />
             <Route path="/agb" element={<AGBPage />} />
           </Routes>
           <Footer />

@@ -29,14 +29,7 @@ export default function CookieBanner() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex-1 pr-8">
             <p className="text-sm text-gray-300 leading-relaxed">
-              Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unsere{' '}
-              <a
-                href="/datenschutz"
-                className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
-              >
-                Datenschutzerklärung
-              </a>
-              {' '}und{' '}
+              Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unser{' '}
               <a
                 href="/impressum"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
