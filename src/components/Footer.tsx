@@ -26,32 +26,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm sm:text-base">
-              <li>
-                <a href="/services" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
-                  Über mich
-                </a>
-              </li>
-              <li>
-                <a href="/portfolio" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
-                  Galerie
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
-                  Kontakt
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Rechtliches</h4>
             <ul className="space-y-2 text-sm sm:text-base">
               <li>
