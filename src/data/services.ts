@@ -1,5 +1,5 @@
 import eventPhoto from '../../assets/20250907-msk09631-verbessert-rr-2.jpg';
-import eventVideoPhoto from '../../assets/20231030-son05544-verbessert-rr.jpg';
+import eventVideoPhoto from '../../assets/dslr_camera_lens_original_669131 copy.jpg';
 import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
 import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
 import eventFotografieIcon from '../../assets/5dcbd8e8-73be-4b58-8b97-90007764cead.png';
