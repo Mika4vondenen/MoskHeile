@@ -39,7 +39,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
+                <a href="/agb" className="text-gray-300 hover:text-[#F5B700] transition-colors duration-300">
                   AGB
                 </a>
               </li>
