@@ -6,20 +6,39 @@ export default function ImpressumPage() {
 
         <div className="prose prose-invert max-w-none space-y-6 sm:space-y-8">
           <section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Angaben gemäß § 5 TMG</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Unternehmen</h2>
             <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
-              <p>Ihr Name</p>
-              <p>Ihre Straße</p>
-              <p>Ihre PLZ und Stadt</p>
-              <p>Ihr Land</p>
+              <p>MOSK unlimited – Einzelunternehmer</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Geschäftssitz</h2>
+            <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <p>Weissenbrücke 2</p>
+              <p>4770 Amel. Belgien</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Rechtliche Vertretung</h2>
+            <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <p>Dmitriy Mamon</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Firmennummer</h2>
+            <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <p>BE1029443083</p>
             </div>
           </section>
 
           <section>
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Kontakt</h2>
             <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
-              <p>E-Mail: <a href="mailto:info@example.com" className="text-blue-400 hover:text-blue-300">info@example.com</a></p>
-              <p>Telefon: +49 (0) XXX XXXXXXX</p>
+              <p>E-Mail: <a href="mailto:d.mamon@moskunlimited.be" className="text-blue-400 hover:text-blue-300">d.mamon@moskunlimited.be</a></p>
+              <p>Telefon: 0176 4769 7299</p>
             </div>
           </section>
 
