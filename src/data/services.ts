@@ -41,21 +41,21 @@ export const eventServices: Service[] = [
 export const businessServices: Service[] = [
   {
     id: 'business-photography',
-    title: 'Business-Fotografie',
+    title: 'Fotografie',
     description: 'Echte Menschen, klare Bilder, starke Wirkung. Ob im Büro, im Laden oder draußen auf der Baustelle – ich fange eure Arbeit so ein, wie sie wirklich ist.\n\nIdeal für:\n• Team- & Portraitfotos\n• Produkte & Markenbilder\n• Baustellen-Reportagen\n• Website- & Social-Media-Content',
     image: businessPhotoPhoto,
     link: '/services/business/fotografie',
   },
   {
     id: 'business-videography',
-    title: 'Business-Videografie',
+    title: 'Videografie',
     description: 'Videos, die zeigen, wer ihr seid und was ihr macht – klar, authentisch und passend zu eurer Marke. Für mehr Sichtbarkeit und Vertrauen.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Projekt- & Baustellenvideos',
     image: 'https://images.pexels.com/photos/4970330/pexels-photo-4970330.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/videografie',
   },
   {
     id: 'business-editing',
-    title: 'Business-Editing',
+    title: 'Editing',
     description: 'Editing für Unternehmen: klarer Schnitt, passende Farben und Optimierungen für Foto- und Videomaterial aus Betrieb, Büro oder Baustelle.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Produkt- & Baustellenmaterial',
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/editing',
