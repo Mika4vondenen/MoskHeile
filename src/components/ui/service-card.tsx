@@ -17,8 +17,9 @@ export function ServiceCard({ title, description, image, icon }: ServiceCardProp
         />
       </div>
       <div className="p-6 sm:p-8 space-y-4 flex flex-col flex-1">
-        <h3 className="text-xl sm:text-2xl font-bold text-white min-h-[3.5rem] flex items-center gap-3">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#22c55e] min-h-[3.5rem] flex items-center gap-3">
           {icon && <img src={icon} alt="" className="w-8 h-8 object-cover" />}
+          {title}
         </h3>
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed flex-1 whitespace-pre-wrap">
           {description}
