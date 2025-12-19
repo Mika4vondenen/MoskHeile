@@ -16,7 +16,7 @@ export interface Service {
 export const eventServices: Service[] = [
   {
     id: 'event-photography',
-    title: 'Event-Fotografie',
+    title: 'Fotografie',
     description: 'Klare, saubere Bilder eurer Veranstaltung. Ob Festival, Konzert oder private Feier – ich dokumentiere die wichtigsten Momente übersichtlich und zuverlässig.\n\nIdeal für:\n• Events & Festivals\n• Firmenfeiern\n• Konzerte\n• Private Feiern',
     image: eventPhoto,
     link: '/services/event/fotografie',
@@ -24,14 +24,14 @@ export const eventServices: Service[] = [
   },
   {
     id: 'event-videography',
-    title: 'Event-Videografie',
+    title: 'Videografie',
     description: 'Videos, die euer Event gut und verständlich zeigen – von Aftermovies über Social-Media-Clips bis zu Konzertmitschnitten.\n\nIdeal für:\n• Aftermovies\n• Konzertvideos\n• Social-Media-Clips\n• Event-Recaps',
     image: eventVideoPhoto,
     link: '/services/event/videografie',
   },
   {
     id: 'event-editing',
-    title: 'Event-Editing',
+    title: 'Editing',
     description: 'Nachbearbeitung für Event-Fotos und Event-Videos.\nSaubere Farben, ruhige Schnitte und Optimierungen, damit euer Eventmaterial gut aussieht und direkt nutzbar ist.\n\nIdeal für:\n• Aftermovies\n• Konzert- & Festivalvideos\n• Social-Media-Clips\n• Event-Fotos',
     image: eventEditingPhoto,
     link: '/services/event/editing',
