@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import logoIcon from '../../public/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
 import homeIcon from '../../assets/ChatGPT Image 20. Nov. 2025, 22_43_05.png';
+import servicesIcon from '../../public/chatgpt_image_6._dez._2025,_17_52_55.png';
 
 export default function Navigation() {
   const navigate = useNavigate();
@@ -120,6 +121,7 @@ export default function Navigation() {
     name: item.name,
     icon: item.icon || Mail,
     onClick: item.onClick,
+    image: item.name === 'Services' ? servicesIcon : undefined,
   }))
 
   return (

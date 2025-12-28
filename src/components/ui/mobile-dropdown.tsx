@@ -7,6 +7,7 @@ interface MobileDropdownItem {
   name: string
   icon: LucideIcon
   onClick: () => void
+  image?: string
 }
 
 interface MobileDropdownProps {
@@ -80,7 +81,11 @@ export function MobileDropdown({ items, activeSection }: MobileDropdownProps) {
                       : 'text-white/60 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon size={18} />
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} className="w-[18px] h-[18px]" />
+                  ) : (
+                    <Icon size={18} />
+                  )}
                   <span className="text-sm font-medium">{item.name}</span>
                 </motion.button>
               )
