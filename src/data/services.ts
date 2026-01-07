@@ -3,6 +3,7 @@ import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
 import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
 import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
 import eventFotografieIcon from '../../assets/5dcbd8e8-73be-4b58-8b97-90007764cead.png';
+import eventVideografieIcon from '../../assets/1d9e47f1-8932-407d-aeb3-9505a3ad35ef.png';
 
 export interface Service {
   id: string;
@@ -28,6 +29,7 @@ export const eventServices: Service[] = [
     description: 'Videos, die euer Event gut und verständlich zeigen – von Aftermovies über Social-Media-Clips bis zu Konzertmitschnitten.\n\nIdeal für:\n• Aftermovies\n• Konzertvideos\n• Social-Media-Clips\n• Event-Recaps',
     image: eventVideoPhoto,
     link: '/services/event/videografie',
+    icon: eventVideografieIcon,
   },
   {
     id: 'event-editing',
