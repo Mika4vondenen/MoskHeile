@@ -4,6 +4,7 @@ import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
 import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
 import eventFotografieIcon from '../../assets/5dcbd8e8-73be-4b58-8b97-90007764cead.png';
 import eventVideografieIcon from '../../assets/1d9e47f1-8932-407d-aeb3-9505a3ad35ef.png';
+import eventEditingIcon from '../../assets/c8561e14-7996-49e7-b4e0-e4b07a4612b4.png';
 
 export interface Service {
   id: string;
@@ -37,6 +38,7 @@ export const eventServices: Service[] = [
     description: 'Nachbearbeitung für Event-Fotos und Event-Videos.\nSaubere Farben, ruhige Schnitte und Optimierungen, damit euer Eventmaterial gut aussieht und direkt nutzbar ist.\n\nIdeal für:\n• Aftermovies\n• Konzert- & Festivalvideos\n• Social-Media-Clips\n• Event-Fotos',
     image: eventEditingPhoto,
     link: '/services/event/editing',
+    icon: eventEditingIcon,
   },
 ];
 
@@ -47,6 +49,7 @@ export const businessServices: Service[] = [
     description: 'Echte Menschen, klare Bilder, starke Wirkung. Ob im Büro, im Laden oder draußen auf der Baustelle – ich fange eure Arbeit so ein, wie sie wirklich ist.\n\nIdeal für:\n• Team- & Portraitfotos\n• Produkte & Markenbilder\n• Baustellen-Reportagen\n• Website- & Social-Media-Content',
     image: businessPhotoPhoto,
     link: '/services/business/fotografie',
+    icon: eventFotografieIcon,
   },
   {
     id: 'business-videography',
@@ -54,6 +57,7 @@ export const businessServices: Service[] = [
     description: 'Videos, die zeigen, wer ihr seid und was ihr macht – klar, authentisch und passend zu eurer Marke. Für mehr Sichtbarkeit und Vertrauen.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Projekt- & Baustellenvideos',
     image: 'https://images.pexels.com/photos/4970330/pexels-photo-4970330.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/videografie',
+    icon: eventVideografieIcon,
   },
   {
     id: 'business-editing',
@@ -61,5 +65,6 @@ export const businessServices: Service[] = [
     description: 'Editing für Unternehmen: klarer Schnitt, passende Farben und Optimierungen für Foto- und Videomaterial aus Betrieb, Büro oder Baustelle.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Produkt- & Baustellenmaterial',
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/editing',
+    icon: eventEditingIcon,
   },
 ];
