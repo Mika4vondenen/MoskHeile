@@ -62,7 +62,7 @@ export const businessServices: Service[] = [
   {
     id: 'business-editing',
     title: 'Editing',
-    description: 'Editing für Unternehmen: klarer Schnitt, passende Farben und Optimierungen für Foto- und Videomaterial aus Betrieb, Büro oder Baustelle.\n\nIdeal für:\n• Imagefilme\n• Recruiting-Videos\n• Werbeclips\n• Produkt- & Baustellenmaterial',
+    description: 'Professionelle Postproduktion für bestehendes Videomaterial. Ich übernehme Schnitt, Farbkorrektur und Feinschliff – abgestimmt auf Zielgruppe, Plattform und Einsatzzweck.\n\nIdeal für:\n\n• Schnitt von vorhandenem Material\n• Social-Media- & Onlinevideos\n• Image- & Unternehmensvideos\n• Optimierung für Web & Präsentationen',
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
     link: '/services/business/editing',
     icon: eventEditingIcon,
