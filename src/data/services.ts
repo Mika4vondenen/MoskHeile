@@ -27,7 +27,7 @@ export const eventServices: Service[] = [
   {
     id: 'event-videography',
     title: 'Videografie',
-    description: 'Videos, die euer Event gut und verständlich zeigen – von Aftermovies über Social-Media-Clips bis zu Konzertmitschnitten.\n\nIdeal für:\n• Aftermovies\n• Konzertvideos\n• Social-Media-Clips\n• Event-Recaps',
+    description: 'Bewegte Bilder, die Atmosphäre und Emotionen authentisch einfangen. Ich dokumentiere private Anlässe unaufdringlich und mit Fokus auf natürliche Abläufe, Stimmung und Details.\n\nIdeal für:\n\n• Geburtstage & private Feiern\n• Verlobungen & Jubiläen\n• Familienmomente & Paare\n• Besondere Anlässe',
     image: eventVideoPhoto,
     link: '/services/event/videografie',
     icon: eventVideografieIcon,
