@@ -91,7 +91,11 @@ export default function AGBPage() {
                 onClick={() => setSelectedLanguage(lang.code)}
                 variant={selectedLanguage === lang.code ? 'default' : 'outline'}
                 size="lg"
-                className="min-w-[140px] transition-all duration-200"
+                className={`min-w-[140px] transition-all duration-200 ${
+                  selectedLanguage === lang.code
+                    ? 'bg-black text-white hover:bg-neutral-900'
+                    : 'bg-[#22c55e] text-white border-[#22c55e] hover:bg-[#22c55e]/90'
+                }`}
               >
                 <span className="mr-2 text-xl">{lang.flag}</span>
                 {lang.label}
