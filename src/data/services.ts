@@ -19,7 +19,7 @@ export const eventServices: Service[] = [
   {
     id: 'event-photography',
     title: 'Fotografie',
-    description: 'Klare, saubere Bilder eurer Veranstaltung. Ob Festival, Konzert oder private Feier – ich dokumentiere die wichtigsten Momente übersichtlich und zuverlässig.\n\nIdeal für:\n• Events & Festivals\n• Firmenfeiern\n• Konzerte\n• Private Feiern',
+    description: 'Erinnerungen, die bleiben – in ruhigen, klaren Bildern. Ich begleite deinen Anlass dezent und fokussiere mich auf echte Momente, Details und Stimmung.\n\nIdeal für:\n• Geburtstage & private Feiern\n• Verlobungen & Jubiläen\n• Familien- & Paarfotos\n• Taufen & besondere Anlässe',
     image: eventPhoto,
     link: '/services/event/fotografie',
     icon: eventFotografieIcon,
