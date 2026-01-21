@@ -93,8 +93,8 @@ export default function AGBPage() {
                 size="lg"
                 className={`min-w-[140px] transition-all duration-200 ${
                   selectedLanguage === lang.code
-                    ? 'bg-black text-white hover:bg-neutral-900'
-                    : 'bg-[#22c55e] text-white border-[#22c55e] hover:bg-[#22c55e]/90'
+                    ? 'bg-black text-white hover:bg-black'
+                    : 'bg-[#22c55e] text-white border-[#22c55e] hover:bg-black'
                 }`}
               >
                 <span className="mr-2 text-xl">{lang.flag}</span>
