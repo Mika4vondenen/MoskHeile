@@ -29,14 +29,14 @@ export default function CookieBanner() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex-1 pr-8">
             <p className="text-sm text-gray-300 leading-relaxed">
-              Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die Nutzung unserer Website akzeptieren Sie unser{' '}
+              Diese Website verwendet technisch notwendige Cookies. Sie können weitere Informationen in unser{' '}
               <a
                 href="/impressum"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
               >
-                Impressum
+                Datenschutzerklärung
               </a>
-              .
+              {' '}finden.
             </p>
           </div>
 
@@ -45,14 +45,14 @@ export default function CookieBanner() {
               onClick={handleReject}
               className="px-4 py-2 text-sm font-medium text-gray-300 bg-neutral-800 hover:bg-neutral-700 rounded-lg transition-colors duration-200"
             >
-              Ablehnen
+              Schließen
             </button>
-            <button
-              onClick={handleAccept}
-              className="px-4 py-2 text-sm font-medium text-neutral-900 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors duration-200"
+            <a
+              href="/impressum"
+              className="px-4 py-2 text-sm font-medium text-neutral-900 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors duration-200 inline-block text-center"
             >
-              Akzeptieren
-            </button>
+              Datenschutzerklärung
+            </a>
           </div>
 
           <button
