@@ -231,6 +231,14 @@ export default function Contact() {
                   </>
                 )}
               </button>
+
+              <p className="text-xs sm:text-sm text-gray-400 text-center leading-relaxed">
+                Mit dem Absenden des Formulars erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten zur Bearbeitung meiner Anfrage gemäß der{' '}
+                <a href="/datenschutz" className="text-[#22c55e] hover:text-[#16a34a] underline transition-colors">
+                  Datenschutzerklärung
+                </a>{' '}
+                einverstanden
+              </p>
             </form>
           </div>
 
