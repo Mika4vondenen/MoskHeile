@@ -15,8 +15,9 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Geschäftssitz</h2>
             <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
-              <p>Weissenbrücke 2</p>
-              <p>4770 Amel. Belgien</p>
+              <p>Bahnhofstraße 16/1</p>
+              <p>4780 St. Vith</p>
+              <p>Belgien</p>
             </div>
           </section>
 
@@ -28,7 +29,14 @@ export default function ImpressumPage() {
           </section>
 
           <section>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Firmennummer</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Unternehmensnummer (BCE/KBO)</h2>
+            <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <p>BE1029443083</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Umsatzsteuer-Identifikationsnummer</h2>
             <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
               <p>BE1029443083</p>
             </div>
@@ -38,7 +46,14 @@ export default function ImpressumPage() {
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Kontakt</h2>
             <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
               <p>E-Mail: <a href="mailto:d.mamon@moskunlimited.be" className="text-blue-400 hover:text-blue-300">d.mamon@moskunlimited.be</a></p>
-              <p>Telefon: 0176 4769 7299</p>
+              <p>Telefon: +49 176 4769 7299</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-4">Zuständige Aufsichtsbehörde</h2>
+            <div className="text-gray-300 space-y-1 sm:space-y-2 text-sm sm:text-base">
+              <p>SPF Économie / FOD Economie – Belgien</p>
             </div>
           </section>
         </div>
