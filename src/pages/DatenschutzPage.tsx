@@ -19,44 +19,49 @@ interface DatenschutzData {
 const datenschutzData: DatenschutzData = {
   de: {
     title: 'Datenschutzerklärung',
-    description: 'Informationen zur Datenverarbeitung gemäß DSGVO',
+    description: 'Stand: Januar 2026',
     content: [
-      '1. Datenschutz auf einen Blick - Allgemeine Hinweise: Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
-      '2. Verantwortliche Stelle: Verantwortlich für die Datenverarbeitung auf dieser Website ist: MOSK unlimited – Einzelunternehmer, Dmitriy Mamon, Weissenbrücke 2, 4770 Amel, Belgien. E-Mail: d.mamon@moskunlimited.be, Telefon: 0176 4769 7299',
-      '3. Datenerfassung - Kontaktformular: Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.',
-      '3. Datenerfassung - Cookies: Diese Website verwendet nur technisch notwendige Cookies, um die Funktionalität der Website zu gewährleisten. Diese Cookies speichern keine personenbezogenen Daten und dienen ausschließlich dazu, Ihre Einstellungen während Ihres Besuchs zu speichern.',
-      '3. Datenerfassung - Server-Log-Dateien: Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt: Browsertyp und Browserversion, Verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.',
-      '4. Ihre Rechte: Sie haben jederzeit das Recht: Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO), Die Berichtigung unrichtiger oder Vervollständigung unvollständiger Daten zu verlangen (Art. 16 DSGVO), Die Löschung Ihrer bei uns gespeicherten Daten zu verlangen (Art. 17 DSGVO), Die Einschränkung der Verarbeitung Ihrer Daten zu verlangen (Art. 18 DSGVO), Der Verarbeitung Ihrer Daten zu widersprechen (Art. 21 DSGVO), Ihre Daten in einem gängigen, maschinenlesbaren Format zu erhalten (Art. 20 DSGVO). Zur Ausübung dieser Rechte wenden Sie sich bitte an: d.mamon@moskunlimited.be',
-      '5. Datensicherheit: Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. Wir bedienen uns im Übrigen geeigneter technischer und organisatorischer Sicherheitsmaßnahmen, um Ihre Daten gegen zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust, Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen.',
-      '6. Aktualität und Änderung dieser Datenschutzerklärung: Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Januar 2026. Durch die Weiterentwicklung unserer Website oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.',
+      '1. Verantwortlicher: MOSK unlimited, Bahnhofstraße 16/1, 4780 St. Vith, Belgien. E-Mail: d.mamon@moskunlimited.be, Telefon: +49 176 4769 7299',
+      '2. Allgemeine Hinweise zur Datenverarbeitung: Wir verarbeiten personenbezogene Daten ausschließlich im Einklang mit der Datenschutz-Grundverordnung (DSGVO) sowie den geltenden belgischen Datenschutzgesetzen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
+      '3. Erhebung und Verarbeitung personenbezogener Daten: Wir erheben und verarbeiten personenbezogene Daten nur, wenn Sie uns diese freiwillig mitteilen, insbesondere durch: Nutzung des Kontaktformulars, Kontaktaufnahme per E-Mail oder Telefon. Verarbeitete Daten können sein: Vor- und Nachname, E-Mail-Adresse, Telefonnummer, Inhalt der Nachricht.',
+      '4. Zweck der Verarbeitung: Die Verarbeitung der Daten erfolgt ausschließlich zum Zweck der: Bearbeitung Ihrer Anfrage, Kontaktaufnahme und Kommunikation, Angebotserstellung und Vertragsvorbereitung.',
+      '5. Rechtsgrundlage der Verarbeitung: Die Verarbeitung erfolgt auf Grundlage von: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen), Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Kommunikation).',
+      '6. Speicherdauer: Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Bearbeitung Ihrer Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.',
+      '7. Weitergabe von Daten: Eine Weitergabe Ihrer Daten an Dritte erfolgt nicht, es sei denn: sie ist zur Vertragserfüllung erforderlich oder wir sind gesetzlich dazu verpflichtet.',
+      '8. Server-Log-Files: Beim Besuch der Website werden automatisch Informationen durch den Hosting-Provider erfasst (z. B. IP-Adresse, Browsertyp, Datum und Uhrzeit). Diese Daten dienen der technischen Sicherheit und werden nicht mit anderen Datenquellen zusammengeführt.',
+      '9. Ihre Rechte: Sie haben jederzeit das Recht auf: Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO), Berichtigung unrichtiger Daten (Art. 16 DSGVO), Löschung Ihrer Daten (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO), Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).',
+      '10. Beschwerderecht: Sie haben das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren: Autorité de protection des données (APD / GBA), Rue de la Presse 35, 1000 Brüssel, www.dataprotectionauthority.be',
+      '11. Kontaktformular – Hinweistext: Mit dem Absenden des Formulars erkläre ich mich mit der Verarbeitung meiner personenbezogenen Daten zur Bearbeitung meiner Anfrage gemäß der Datenschutzerklärung einverstanden.',
     ],
   },
   en: {
     title: 'Privacy Policy',
-    description: 'Information on data processing according to GDPR',
+    description: 'Valid from: January 2026',
     content: [
-      '1. Privacy at a Glance - General Information: The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you.',
-      '2. Controller: The controller for data processing on this website is: MOSK unlimited – Sole Proprietor, Dmitriy Mamon, Weissenbrücke 2, 4770 Amel, Belgium. Email: d.mamon@moskunlimited.be, Phone: 0176 4769 7299',
-      '3. Data Collection - Contact Form: If you send us inquiries via the contact form, your details from the inquiry form including the contact data you provided there will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent. The processing of this data is based on Art. 6 para. 1 lit. b GDPR.',
-      '3. Data Collection - Cookies: This website only uses technically necessary cookies to ensure the functionality of the website. These cookies do not store any personal data and serve exclusively to save your settings during your visit.',
-      '3. Data Collection - Server Log Files: The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us: Browser type and version, Operating system used, Referrer URL, Hostname of the accessing computer, Time of server request, IP address. This data is not merged with other data sources.',
-      '4. Your Rights: You have the right at any time to: Obtain information about your personal data stored by us (Art. 15 GDPR), Request the correction of incorrect or completion of incomplete data (Art. 16 GDPR), Request the deletion of your data stored by us (Art. 17 GDPR), Request the restriction of the processing of your data (Art. 18 GDPR), Object to the processing of your data (Art. 21 GDPR), Receive your data in a common, machine-readable format (Art. 20 GDPR). To exercise these rights, please contact: d.mamon@moskunlimited.be',
-      '5. Data Security: We use the widespread SSL procedure (Secure Socket Layer) within the website visit in connection with the highest encryption level supported by your browser. We also use suitable technical and organizational security measures to protect your data against accidental or intentional manipulation, partial or complete loss, destruction or unauthorized access by third parties.',
-      '6. Validity and Changes to this Privacy Policy: This privacy policy is currently valid and dated January 2026. Due to the further development of our website or due to changed legal or official requirements, it may become necessary to change this privacy policy.',
+      '1. Data controller: MOSK unlimited, Bahnhofstraße 16/1, 4780 St. Vith, Belgium. E-mail: d.mamon@moskunlimited.be, Phone: +49 176 4769 7299',
+      '2. General information: We process personal data in accordance with the General Data Protection Regulation (GDPR) and applicable Belgian data protection laws.',
+      '3. Data collection: Personal data is collected only when voluntarily provided, particularly via the contact form or direct communication.',
+      '4. Purpose of processing: Data is processed solely for responding to inquiries and preparing contractual relationships.',
+      '5. Legal basis: Article 6(1)(b) GDPR, Article 6(1)(f) GDPR.',
+      '6. Data retention: Personal data is stored only as long as necessary to process the inquiry or comply with legal obligations.',
+      '7. Rights of data subjects: You have the right to access, rectification, erasure, restriction, objection, and data portability.',
+      '8. Supervisory authority: Belgian Data Protection Authority (APD/GBA).',
+      '9. Contact form notice: By submitting this form, I consent to the processing of my personal data in accordance with the privacy policy.',
     ],
   },
   fr: {
     title: 'Politique de Confidentialité',
-    description: 'Informations sur le traitement des données selon le RGPD',
+    description: 'Valable à partir de: janvier 2026',
     content: [
-      '1. Protection des données en un coup d\'œil - Informations générales: Les remarques suivantes fournissent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez ce site web. Les données personnelles sont toutes les données qui peuvent être utilisées pour vous identifier personnellement.',
-      '2. Responsable: Le responsable du traitement des données sur ce site web est: MOSK unlimited – Entreprise individuelle, Dmitriy Mamon, Weissenbrücke 2, 4770 Amel, Belgique. E-mail: d.mamon@moskunlimited.be, Téléphone: 0176 4769 7299',
-      '3. Collecte de données - Formulaire de contact: Si vous nous envoyez des demandes via le formulaire de contact, vos coordonnées du formulaire de demande, y compris les coordonnées que vous y avez fournies, seront stockées par nous dans le but de traiter la demande et en cas de questions de suivi. Nous ne transmettons pas ces données sans votre consentement. Le traitement de ces données est basé sur l\'art. 6 para. 1 lit. b du RGPD.',
-      '3. Collecte de données - Cookies: Ce site web utilise uniquement des cookies techniquement nécessaires pour assurer la fonctionnalité du site. Ces cookies ne stockent aucune donnée personnelle et servent exclusivement à enregistrer vos paramètres pendant votre visite.',
-      '3. Collecte de données - Fichiers journaux du serveur: Le fournisseur des pages collecte et stocke automatiquement des informations dans des fichiers journaux dits du serveur, que votre navigateur nous transmet automatiquement: Type et version du navigateur, Système d\'exploitation utilisé, URL de référence, Nom d\'hôte de l\'ordinateur accédant, Heure de la demande du serveur, Adresse IP. Ces données ne sont pas fusionnées avec d\'autres sources de données.',
-      '4. Vos droits: Vous avez le droit à tout moment de: Obtenir des informations sur vos données personnelles stockées par nous (Art. 15 RGPD), Demander la correction de données incorrectes ou l\'achèvement de données incomplètes (Art. 16 RGPD), Demander la suppression de vos données stockées par nous (Art. 17 RGPD), Demander la restriction du traitement de vos données (Art. 18 RGPD), Vous opposer au traitement de vos données (Art. 21 RGPD), Recevoir vos données dans un format commun lisible par machine (Art. 20 RGPD). Pour exercer ces droits, veuillez contacter: d.mamon@moskunlimited.be',
-      '5. Sécurité des données: Nous utilisons la procédure SSL répandue (Secure Socket Layer) lors de la visite du site web en connexion avec le niveau de cryptage le plus élevé pris en charge par votre navigateur. Nous utilisons également des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données contre la manipulation accidentelle ou intentionnelle, la perte partielle ou complète, la destruction ou l\'accès non autorisé par des tiers.',
-      '6. Validité et modifications de cette politique de confidentialité: Cette politique de confidentialité est actuellement valide et datée de janvier 2026. En raison du développement ultérieur de notre site web ou en raison d\'exigences légales ou officielles modifiées, il peut devenir nécessaire de modifier cette politique de confidentialité.',
+      '1. Responsable du traitement: MOSK unlimited, Bahnhofstraße 16/1, 4780 St. Vith, Belgique. E-mail : d.mamon@moskunlimited.be, Téléphone : +49 176 4769 7299',
+      '2. Informations générales: Nous traitons les données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la législation belge applicable.',
+      '3. Données collectées: Les données personnelles sont collectées uniquement lorsque vous nous les communiquez volontairement, notamment via le formulaire de contact ou par e-mail.',
+      '4. Finalité du traitement: Les données sont utilisées exclusivement pour répondre à votre demande et établir une relation contractuelle.',
+      '5. Base juridique: Article 6, paragraphe 1, point b) RGPD, Article 6, paragraphe 1, point f) RGPD.',
+      '6. Durée de conservation: Les données sont conservées uniquement pendant la durée nécessaire au traitement de votre demande.',
+      '7. Droits des personnes concernées: Vous disposez d\'un droit d\'accès, de rectification, de suppression, de limitation, d\'opposition et de portabilité de vos données.',
+      '8. Autorité de contrôle: Autorité de protection des données (APD/GBA), Belgique.',
+      '9. Mention formulaire de contact: En envoyant ce formulaire, j\'accepte le traitement de mes données personnelles conformément à la politique de confidentialité.',
     ],
   },
 };
@@ -123,16 +128,32 @@ export default function DatenschutzPage() {
           <CardContent className="pt-6">
             <ScrollArea className="h-[500px] sm:h-[600px] w-full rounded-lg border-2 border-[#22c55e]/20 p-4 sm:p-6 bg-neutral-800/30">
               <div className="space-y-4 sm:space-y-6">
-                {currentContent.content.map((paragraph, index) => (
-                  <div
-                    key={index}
-                    className="p-3 sm:p-4 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-[#22c55e]/50 transition-colors"
-                  >
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                {currentContent.content.map((paragraph, index) => {
+                  const colonIndex = paragraph.indexOf(':');
+                  const hasHeader = colonIndex > 0 && colonIndex < 100;
+
+                  if (hasHeader) {
+                    const header = paragraph.substring(0, colonIndex);
+                    const content = paragraph.substring(colonIndex + 1).trim();
+
+                    return (
+                      <div key={index}>
+                        <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                          {header}:
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed text-sm sm:text-base ml-4">
+                          {content}
+                        </p>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <p key={index} className="text-gray-300 leading-relaxed text-sm sm:text-base">
                       {paragraph}
                     </p>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </ScrollArea>
           </CardContent>
