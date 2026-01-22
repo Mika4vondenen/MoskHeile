@@ -95,8 +95,8 @@ export default function DatenschutzPage() {
                 onClick={() => setSelectedLanguage(lang.code)}
                 className={
                   selectedLanguage === lang.code
-                    ? 'bg-black hover:bg-black/90 text-white min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
-                    : 'bg-[#22c55e] hover:bg-[#22c55e]/90 text-black min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
+                    ? 'bg-white hover:bg-white text-black min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
+                    : 'bg-[#22c55e] hover:bg-white hover:text-black text-black min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
                 }
               >
                 {lang.label}
