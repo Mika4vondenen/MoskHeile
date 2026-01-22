@@ -108,12 +108,33 @@ export default function AGBPage() {
           </CardHeader>
           <CardContent>
             <ScrollArea className="h-[500px] w-full rounded-md border border-neutral-800 p-4 bg-neutral-950">
-              <div className="space-y-4">
-                {currentContent.content.map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                    {paragraph}
-                  </p>
-                ))}
+              <div className="space-y-6">
+                {currentContent.content.map((paragraph, index) => {
+                  const colonIndex = paragraph.indexOf(':');
+                  const hasHeader = colonIndex > 0 && colonIndex < 50;
+
+                  if (hasHeader) {
+                    const header = paragraph.substring(0, colonIndex);
+                    const content = paragraph.substring(colonIndex + 1).trim();
+
+                    return (
+                      <div key={index}>
+                        <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                          {header}:
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed text-sm sm:text-base ml-4">
+                          {content}
+                        </p>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <p key={index} className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </div>
             </ScrollArea>
           </CardContent>
