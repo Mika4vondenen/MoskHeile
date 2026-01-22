@@ -31,7 +31,7 @@ export default function CookieBanner() {
             <p className="text-sm text-gray-300 leading-relaxed">
               Diese Website verwendet technisch notwendige Cookies. Sie können weitere Informationen in unser{' '}
               <a
-                href="/impressum"
+                href="/datenschutz"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
               >
                 Datenschutzerklärung
@@ -48,7 +48,7 @@ export default function CookieBanner() {
               Schließen
             </button>
             <a
-              href="/impressum"
+              href="/datenschutz"
               className="px-4 py-2 text-sm font-medium text-neutral-900 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors duration-200 inline-block text-center"
             >
               Datenschutzerklärung
