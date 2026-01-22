@@ -11,6 +11,8 @@ import BusinessServicesPage from './pages/BusinessServicesPage';
 import PortfolioPage from './pages/PortfolioPage';
 import ImpressumPage from './pages/ImpressumPage';
 import AGBPage from './pages/AGBPage';
+import TermsPage from './pages/TermsPage';
+import ConditionsGeneralesPage from './pages/ConditionsGeneralesPage';
 import GalleryTestPage from './pages/GalleryTestPage';
 import { AnimationProvider } from './context/AnimationContext';
 
@@ -38,6 +40,8 @@ function App() {
             <Route path="/gallery-test" element={<GalleryTestPage />} />
             <Route path="/impressum" element={<ImpressumPage />} />
             <Route path="/agb" element={<AGBPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/conditions-generales" element={<ConditionsGeneralesPage />} />
           </Routes>
           <Footer />
           <CookieBanner />

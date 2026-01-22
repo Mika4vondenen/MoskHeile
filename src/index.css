@@ -109,3 +109,29 @@ footer * {
     gap: 1.5rem;
   }
 }
+
+.lang-button {
+  display: inline-block;
+  background-color: #22c55e;
+  color: #000000;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.lang-button:hover {
+  background-color: #16a34a;
+}
+
+.lang-button.lang-active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.lang-button.lang-active:hover {
+  background-color: #000000;
+}
