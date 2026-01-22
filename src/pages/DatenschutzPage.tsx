@@ -92,11 +92,12 @@ export default function DatenschutzPage() {
             {languageButtons.map((lang) => (
               <Button
                 key={lang.code}
+                variant="ghost"
                 onClick={() => setSelectedLanguage(lang.code)}
                 className={
                   selectedLanguage === lang.code
-                    ? 'bg-white hover:bg-white text-black min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
-                    : 'bg-[#22c55e] hover:bg-white hover:text-black text-black min-w-[120px] sm:min-w-[140px] h-10 sm:h-11 text-sm sm:text-base'
+                    ? "min-w-[140px] transition-all duration-200 bg-black text-white hover:bg-black border-0"
+                    : "min-w-[140px] transition-all duration-200 bg-[#22c55e] text-black hover:bg-[#16a34a] border-0"
                 }
               >
                 {lang.label}
