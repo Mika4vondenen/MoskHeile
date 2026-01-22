@@ -56,6 +56,24 @@ export default function ImpressumPage() {
               <p>SPF Économie / FOD Economie – Belgien</p>
             </div>
           </section>
+
+          <section className="pt-6 sm:pt-8 border-t border-gray-700">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4">Weitere Informationen</h2>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/agb"
+                className="inline-flex items-center px-6 py-3 bg-[#22c55e] text-black font-semibold rounded-lg hover:bg-[#16a34a] transition-all duration-300 text-sm sm:text-base"
+              >
+                AGB
+              </a>
+              <a
+                href="/datenschutz"
+                className="inline-flex items-center px-6 py-3 bg-[#22c55e] text-black font-semibold rounded-lg hover:bg-[#16a34a] transition-all duration-300 text-sm sm:text-base"
+              >
+                Datenschutzerklärung
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     </div>

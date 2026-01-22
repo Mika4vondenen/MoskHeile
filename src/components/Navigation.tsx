@@ -1,4 +1,4 @@
-import { Home, Info, Image, Mail, Zap } from 'lucide-react';
+import { Home, Info, Image, Mail, Zap, FileText } from 'lucide-react';
 import { NavBar } from './ui/tubelight-navbar';
 import { MobileDropdown } from './ui/mobile-dropdown';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -22,6 +22,9 @@ export default function Navigation() {
       return;
     } else if (location.pathname === '/portfolio') {
       setActiveSection('Galerie');
+      return;
+    } else if (location.pathname === '/impressum') {
+      setActiveSection('Impressum');
       return;
     }
 
@@ -109,12 +112,18 @@ export default function Navigation() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
+  const goToImpressum = () => {
+    navigate('/impressum');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   const navItems = [
     { name: 'Home', image: homeIcon, onClick: () => goToHome() },
     { name: 'Services', icon: Zap, onClick: () => goToServices() },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },
+    { name: 'Impressum', icon: FileText, onClick: () => goToImpressum() },
   ]
 
   const mobileNavItems = navItems.map(item => ({
