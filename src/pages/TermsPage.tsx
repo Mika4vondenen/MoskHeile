@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { ScrollArea } from '../components/ui/scroll-area';
+import { LanguageSelector } from '../App';
 
 const termsContent = {
   title: 'Terms and Conditions',
@@ -26,17 +27,7 @@ export default function TermsPage() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center">
             AGB / Terms & Conditions / Conditions Générales
           </h1>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a href="/agb" className="lang-button">
-              Deutsch
-            </a>
-            <a href="/terms" className="lang-button lang-active">
-              English
-            </a>
-            <a href="/conditions-generales" className="lang-button">
-              Français
-            </a>
-          </div>
+          <LanguageSelector currentLanguage="en" />
         </div>
 
         <Card>
