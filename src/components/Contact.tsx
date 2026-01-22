@@ -259,7 +259,7 @@ export default function Contact() {
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="bg-[#f59e0b] w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0"><MapPin className="text-[#0A1F44]" size={20} /></div>
-                  <div><h4 className="font-semibold text-gray-300 mb-1 text-sm sm:text-base">STANDORT</h4><p className="text-gray-400 text-xs sm:text-sm">BELGIEN<br />Weissenbrücke 2. 4770 Amel</p></div>
+                  <div><h4 className="font-semibold text-gray-300 mb-1 text-sm sm:text-base">STANDORT</h4><p className="text-gray-400 text-xs sm:text-sm">Bahnhofstraße 16/1<br />4780 St. Vith<br />Belgien</p></div>
                 </div>
              </div>
              <div className="bg-black p-6 sm:p-8 rounded-xl">
