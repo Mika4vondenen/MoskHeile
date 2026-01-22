@@ -14,7 +14,7 @@ interface ContentData {
 const contentByLanguage: Record<Language, ContentData> = {
   de: {
     title: 'Allgemeine Geschäftsbedingungen',
-    description: 'Gültig ab Januar 2026',
+    description: 'Stand Januar 2026',
     content: [
       '1. Geltungsbereich: Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen MOSK unlimited, Bahnhofstraße 16/1, 4780 St. Vith, Belgien (nachfolgend "Auftragnehmer") und ihren Kunden ("Auftraggeber"), sowohl im B2B- als auch im B2C-Bereich.',
       '2. Leistungen: Der Auftragnehmer erbringt kreative Dienstleistungen, insbesondere in den Bereichen Fotografie, Videoproduktion, Grafik- und Logodesign, Webdesign, Online- und Social-Media-Marketing, Druck- und Werbetechnik sowie damit verbundene Beratungs- und Koordinationsleistungen. Der Auftragnehmer ist berechtigt, zur Vertragserfüllung Dritte einzusetzen.',
