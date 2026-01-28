@@ -3,8 +3,7 @@ import { NavBar } from './ui/tubelight-navbar';
 import { MobileDropdown } from './ui/mobile-dropdown';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
-import logoIcon from '../../assets/cam.png';
-import homeIcon from '../../assets/image.png';
+import logoIcon from '../../public/Logo.png';
 import serviceIcon from '../../assets/f61c5e57-a3c5-4a50-99e0-637f33fef76b.png';
 
 export default function Navigation() {
@@ -118,7 +117,7 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { name: 'Home', image: homeIcon, onClick: () => goToHome() },
+    { name: 'Home', icon: Home, onClick: () => goToHome() },
     { name: 'Services', icon: Zap, onClick: () => goToServices() },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
@@ -130,7 +129,7 @@ export default function Navigation() {
     name: item.name,
     icon: item.icon || Mail,
     onClick: item.onClick,
-    image: item.name === 'Home' ? homeIcon : item.name === 'Services' ? serviceIcon : undefined,
+    image: item.name === 'Services' ? serviceIcon : undefined,
   }))
 
   return (
