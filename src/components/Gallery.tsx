@@ -25,20 +25,20 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  { src: img1, alt: 'Gallery image 1', category: 'Fotografie' },
-  { src: img2, alt: 'Gallery image 2', category: 'Fotografie' },
-  { src: img3, alt: 'Gallery image 3', category: 'Fotografie' },
-  { src: img4, alt: 'Gallery image 4', category: 'Fotografie' },
-  { src: img5, alt: 'Gallery image 5', category: 'Fotografie' },
-  { src: img6, alt: 'Gallery image 6', category: 'Fotografie' },
-  { src: img7, alt: 'Gallery image 7', category: 'Fotografie' },
-  { src: img8, alt: 'Gallery image 8', category: 'Fotografie' },
-  { src: img9, alt: 'Gallery image 9', category: 'Fotografie' },
-  { src: img10, alt: 'Gallery image 10', category: 'Fotografie' },
-  { src: img11, alt: 'Gallery image 11', category: 'Fotografie' },
-  { src: img12, alt: 'Gallery image 12', category: 'Fotografie' },
-  { src: img13, alt: 'Gallery image 13', category: 'Fotografie' },
-  { src: img14, alt: 'Gallery image 14', category: 'Fotografie' },
+  { src: img5, alt: 'DJ Performance', category: 'Fotografie' },
+  { src: img13, alt: 'Rave Event', category: 'Fotografie' },
+  { src: img9, alt: 'Dunkle Atmosphäre', category: 'Fotografie' },
+  { src: img2, alt: 'Bunter Rave', category: 'Fotografie' },
+  { src: img14, alt: 'Event Detail', category: 'Fotografie' },
+  { src: img1, alt: 'Bunte Szene', category: 'Fotografie' },
+  { src: img6, alt: 'DJ Action', category: 'Fotografie' },
+  { src: img10, alt: 'Festival Crowd', category: 'Fotografie' },
+  { src: img3, alt: 'Dampf Effekt', category: 'Fotografie' },
+  { src: img12, alt: 'Portrait', category: 'Fotografie' },
+  { src: img11, alt: 'Festival Publikum', category: 'Fotografie' },
+  { src: img4, alt: 'Dark Rave', category: 'Fotografie' },
+  { src: img7, alt: 'DJ Magga', category: 'Fotografie' },
+  { src: img8, alt: 'DJ Max', category: 'Fotografie' },
 ];
 
 interface LightboxProps {
