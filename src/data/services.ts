@@ -2,9 +2,9 @@ import eventPhoto from '../../assets/djmax.webp';
 import eventVideoPhoto from '../../assets/Bunterrave.webp';
 import eventEditingPhoto from '../../assets/fest.webp';
 import businessPhotoPhoto from '../../assets/arbeit.jpeg';
-import eventFotografieIcon from '../../assets/cam.png';
+import eventFotografieIcon from '../../assets/cammicon.png';
 import eventVideografieIcon from '../../assets/cam.png';
-import eventEditingIcon from '../../assets/cam.png';
+import eventEditingIcon from '../../assets/editing.png';
 
 export interface Service {
   id: string;
