@@ -3,21 +3,20 @@ import { ChevronLeft, ChevronRight, X, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import { BlurFade } from './ui/blur-fade';
-import img1 from '../../assets/arbeit.jpeg';
-import img2 from '../../assets/arbeit.jpeg';
-import img3 from '../../assets/arbeit.jpeg';
-import img4 from '../../assets/arbeit.jpeg';
-import img5 from '../../assets/arbeit.jpeg';
-import img6 from '../../assets/arbeit.jpeg';
-import img7 from '../../assets/arbeit.jpeg';
-import img8 from '../../assets/arbeit.jpeg';
-import img9 from '../../assets/arbeit.jpeg';
-import img10 from '../../assets/arbeit.jpeg';
-import img11 from '../../assets/arbeit.jpeg';
-import img12 from '../../assets/arbeit.jpeg';
-import img13 from '../../assets/arbeit.jpeg';
-import img14 from '../../assets/arbeit.jpeg';
-import img15 from '../../assets/arbeit.jpeg';
+import img1 from '../../assets/bunt.webp';
+import img2 from '../../assets/Bunterrave.webp';
+import img3 from '../../assets/DampfVerbessertRR.webp';
+import img4 from '../../assets/darkrave.webp';
+import img5 from '../../assets/DJ.webp';
+import img6 from '../../assets/DJ2VerbessertRR.webp';
+import img7 from '../../assets/djmagga.webp';
+import img8 from '../../assets/djmax.webp';
+import img9 from '../../assets/dunkelrave.webp';
+import img10 from '../../assets/fest.webp';
+import img11 from '../../assets/fest2.webp';
+import img12 from '../../assets/jungspunt.webp';
+import img13 from '../../assets/Rave.webp';
+import img14 from '../../assets/VerbessertRR.webp';
 
 interface GalleryItem {
   src: string;
@@ -40,7 +39,6 @@ const galleryItems: GalleryItem[] = [
   { src: img12, alt: 'Gallery image 12', category: 'Fotografie' },
   { src: img13, alt: 'Gallery image 13', category: 'Fotografie' },
   { src: img14, alt: 'Gallery image 14', category: 'Fotografie' },
-  { src: img15, alt: 'Gallery image 15', category: 'Fotografie' },
 ];
 
 interface LightboxProps {
