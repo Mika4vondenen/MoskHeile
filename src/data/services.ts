@@ -1,10 +1,10 @@
-import eventPhoto from '../../assets/SON03067.webp';
-import eventVideoPhoto from '../../assets/20230813-SON08196-Verbessert-RR.webp';
-import eventEditingPhoto from '../../assets/20230701-SON06592.webp';
-import businessPhotoPhoto from '../../assets/e94e52c6c69a93e4b17a2570bb1a9e20.jpg';
-import eventFotografieIcon from '../../assets/5dcbd8e8-73be-4b58-8b97-90007764cead.png';
-import eventVideografieIcon from '../../assets/1d9e47f1-8932-407d-aeb3-9505a3ad35ef.png';
-import eventEditingIcon from '../../assets/c8561e14-7996-49e7-b4e0-e4b07a4612b4.png';
+import eventPhoto from '../../assets/arbeit.jpeg';
+import eventVideoPhoto from '../../assets/arbeit.jpeg';
+import eventEditingPhoto from '../../assets/arbeit.jpeg';
+import businessPhotoPhoto from '../../assets/arbeit.jpeg';
+import eventFotografieIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
+import eventVideografieIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
+import eventEditingIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
 
 export interface Service {
   id: string;
