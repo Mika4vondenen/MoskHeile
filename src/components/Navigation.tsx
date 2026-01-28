@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import logoIcon from '../../public/Logo.png';
 import serviceIcon from '../../assets/f61c5e57-a3c5-4a50-99e0-637f33fef76b.png';
+import houseIcon from '../../assets/house.png';
 
 export default function Navigation() {
   const navigate = useNavigate();
@@ -117,8 +118,8 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { name: 'Home', icon: Home, onClick: () => goToHome() },
-    { name: 'Services', icon: Zap, onClick: () => goToServices() },
+    { name: 'Home', icon: Home, onClick: () => goToHome(), image: houseIcon },
+    { name: 'Services', icon: Zap, onClick: () => goToServices(), image: serviceIcon },
     { name: 'Über mich', icon: Info, onClick: () => goToAbout() },
     { name: 'Galerie', icon: Image, onClick: () => goToPortfolio() },
     { name: 'Kontakt', icon: Mail, onClick: () => scrollToContact() },
@@ -129,7 +130,7 @@ export default function Navigation() {
     name: item.name,
     icon: item.icon || Mail,
     onClick: item.onClick,
-    image: item.name === 'Services' ? serviceIcon : undefined,
+    image: item.image,
   }))
 
   return (
