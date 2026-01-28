@@ -3,8 +3,8 @@ import { NavBar } from './ui/tubelight-navbar';
 import { MobileDropdown } from './ui/mobile-dropdown';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
-import logoIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
-import homeIcon from '../../assets/ChatGPT Image 20. Nov. 2025, 13_15_32.png';
+import logoIcon from '../../assets/cam.png';
+import homeIcon from '../../assets/image.png';
 import serviceIcon from '../../assets/f61c5e57-a3c5-4a50-99e0-637f33fef76b.png';
 
 export default function Navigation() {

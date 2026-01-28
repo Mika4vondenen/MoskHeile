@@ -2,9 +2,9 @@ import eventPhoto from '../../assets/arbeit.jpeg';
 import eventVideoPhoto from '../../assets/arbeit.jpeg';
 import eventEditingPhoto from '../../assets/arbeit.jpeg';
 import businessPhotoPhoto from '../../assets/arbeit.jpeg';
-import eventFotografieIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
-import eventVideografieIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
-import eventEditingIcon from '../../assets/1d26fb92-f725-4f82-8838-d35c9c7fe8b1.png';
+import eventFotografieIcon from '../../assets/cam.png';
+import eventVideografieIcon from '../../assets/cam.png';
+import eventEditingIcon from '../../assets/cam.png';
 
 export interface Service {
   id: string;
